@@ -1,25 +1,43 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { Suspense, lazy, useEffect } from "react";
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import AOS from "aos";
+import "aos/dist/aos.css";
+import { ABOUT, CONTACT, HOME, WORKS } from "./services/routes";
+import loaderImg from "./assets/img/loader.png";
+
+import "./index.css";
+const Home = lazy(() => import("./pages/Home"));
+const About = lazy(() => import("./pages/About"));
+const Works = lazy(() => import("./pages/Works"));
+const Contact = lazy(() => import("./pages/Contact"));
 
 function App() {
+  useEffect(() => {
+    AOS.init({
+      duration: 1000,
+    });
+  }, []);
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Suspense
+      fallback={
+        <div className="loader-container">
+          <div className="loader-container-inner">
+            <img src={loaderImg} alt="loader" className="spin-loader" />
+          </div>
+        </div>
+      }
+    >
+      <Router>
+        <Switch>
+          <Route exact path={HOME} component={Home} />
+          <Route exact path={ABOUT} component={About} />
+          <Route exact path={WORKS} component={Works} />
+          <Route exact path={CONTACT} component={Contact} />
+          {/* <Route exact path={"/course_details/:id"} component={CourseDetails} />
+          <Route component={ErrorPage} /> */}
+        </Switch>
+      </Router>
+    </Suspense>
   );
 }
 

@@ -146,7 +146,7 @@ const Home = () => {
               text: "Case Study",
               textColor: "#ffffff",
               bgColor: "#F04770",
-              link: "/",
+              link: "/work-details",
             }}
             imgRight={eduBg}
           />
@@ -162,7 +162,7 @@ const Home = () => {
               text: "Case Study",
               textColor: "#ffffff",
               bgColor: "#03B66B",
-              link: "/",
+              link: "/work-details",
             }}
             imgRight={pmbBg}
           />

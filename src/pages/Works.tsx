@@ -41,7 +41,7 @@ const Works = () => {
               text: "Case Study",
               textColor: "#ffffff",
               bgColor: "#F04770",
-              link: "/",
+              link: "/work-details",
             }}
             imgRight={eduBg}
           />
@@ -55,7 +55,7 @@ const Works = () => {
               text: "Case Study",
               textColor: "#ffffff",
               bgColor: "#03B66B",
-              link: "/",
+              link: "/work-details",
             }}
             imgRight={pmbBg}
           />
@@ -72,7 +72,7 @@ const Works = () => {
               text: "Case Study",
               textColor: "#ffffff",
               bgColor: "#F04770",
-              link: "/",
+              link: "/work-details",
             }}
             imgRight={unknownBg}
           />
@@ -89,7 +89,7 @@ const Works = () => {
               text: "Case Study",
               textColor: "#ffffff",
               bgColor: "#03B66B",
-              link: "/",
+              link: "/work-details",
             }}
             imgRight={estateBg}
           />
@@ -103,7 +103,7 @@ const Works = () => {
               text: "Case Study",
               textColor: "#ffffff",
               bgColor: "#03B66B",
-              link: "/",
+              link: "/work-details",
             }}
             imgRight={platoBg}
           />

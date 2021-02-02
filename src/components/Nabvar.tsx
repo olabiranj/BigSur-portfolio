@@ -14,7 +14,7 @@ const Navbar = () => {
   return (
     <Navbar.Wrapper>
       {toggle && (
-        <div className="menu" data-aos="fade-left">
+        <div className="menu">
           <div className="nav container">
             <div className="img" onClick={() => history.push(HOME)}>
               <img src={logo2} alt="tm-acad-logo" />
@@ -26,6 +26,7 @@ const Navbar = () => {
           <div className="nav-content">
             <div className="nav-content-inner">
               <div
+                data-aos="fade-left"
                 className={`nav-item ${
                   window.location.pathname === HOME && "active"
                 }`}
@@ -33,6 +34,7 @@ const Navbar = () => {
                 <a href={HOME}>Home</a>
               </div>
               <div
+                data-aos="fade-left"
                 className={`nav-item ${
                   window.location.pathname === ABOUT && "active"
                 }`}
@@ -40,16 +42,18 @@ const Navbar = () => {
                 <a href={ABOUT}>About Me</a>
               </div>
               <div
+                data-aos="fade-left"
                 className={`nav-item ${
                   window.location.pathname === WORKS && "active"
                 }`}
               >
                 <a href={WORKS}>My Works</a>
               </div>
-              <div className="nav-item">
+              <div data-aos="fade-left" className="nav-item">
                 <a href="/">My Resume</a>
               </div>
               <div
+                data-aos="fade-left"
                 className={`nav-item ${
                   window.location.pathname === CONTACT && "active"
                 }`}

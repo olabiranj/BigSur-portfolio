@@ -9,9 +9,6 @@ import bg2Img from "../assets/img/Rectangle73.png";
 import userImg from "../assets/img/user.png";
 import settingsImg from "../assets/img/settings.png";
 import bookImg from "../assets/img/book.png";
-import DisplayCard from "../components/DisplayCard";
-import eduBg from "../assets/img/anna1.jpg";
-import pmbBg from "../assets/img/anna2.jpg";
 import adobeXD from "../assets/img/adobe-xd-logo-png-transparent 2.png";
 import adobeIllustr from "../assets/img/586d7feb25738d9f2d793e96 1.png";
 import adobeAE from "../assets/img/Vector.png";
@@ -21,6 +18,9 @@ import zeplin from "../assets/img/zeplin.png";
 import betterInt from "../assets/img/Rectangle 20.png";
 import arrowLeftImg from "../assets/img/arrow-left.png";
 import Footer from "../components/Footer";
+import DisplayCard2 from "../components/DisplayCard2";
+import eduImg from "../assets/img/eduCard.png";
+import pmbImg from "../assets/img/pmbCard.png";
 
 const Home = () => {
   return (
@@ -135,7 +135,7 @@ const Home = () => {
               digital products. I don’t restrict myself to design.
             </p>
 
-            <DisplayCard
+            <DisplayCard2
               title="EduSponsor"
               desc={`Amet minim mollit non deserunt ullamco est sit aliqua dolor do
               amet sint. Velit officia consequat duis enim velit mollit.
@@ -149,9 +149,9 @@ const Home = () => {
                 bgColor: "#F04770",
                 link: "/work-details",
               }}
-              imgRight={eduBg}
+              imgRight={eduImg}
             />
-            <DisplayCard
+            <DisplayCard2
               title="PayMyBills"
               desc={`Amet minim mollit non deserunt ullamco est sit aliqua dolor do
               amet sint. Velit officia consequat duis enim velit mollit.
@@ -165,7 +165,7 @@ const Home = () => {
                 bgColor: "#03B66B",
                 link: "/work-details",
               }}
-              imgRight={pmbBg}
+              imgRight={pmbImg}
             />
             <div className="see-all">
               <Link bg="#000000" border color="#ffffff" goto={`/works`}>

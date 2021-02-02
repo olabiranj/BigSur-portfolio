@@ -3,20 +3,20 @@ import styled from "styled-components";
 import Navbar from "../components/Nabvar";
 import Footer from "../components/Footer";
 import Link from "../components/inputs/Links";
-import DisplayCard from "../components/DisplayCard";
-import eduBg from "../assets/img/anna1.jpg";
-import pmbBg from "../assets/img/anna2.jpg";
-import unknownBg from "../assets/img/anna3.jpg";
-import estateBg from "../assets/img/anna4.jpg";
-import platoBg from "../assets/img/anna5.jpg";
+import DisplayCard2 from "../components/DisplayCard2";
+import eduImg from "../assets/img/eduCard.png";
+import pmbImg from "../assets/img/pmbCard.png";
+import digicitImg from "../assets/img/digicitCard.png";
+import platoImg from "../assets/img/platoCard.png";
+import residifyImg from "../assets/img/residifyCard.png";
 
 const Works = () => {
   return (
     <div className="container">
       <Works.Wrapper>
         <Navbar />
-        <section className="works col-sm-10 mx-auto">
-          <h2>My Works</h2>
+        <section className="works col-md-10 mx-auto">
+          <h2 className="head-text">My Works</h2>
           <div className="links mt-4">
             <Link>All Project</Link>
             <Link bg="#000000" color="#ffffff" border={true}>
@@ -29,7 +29,7 @@ const Works = () => {
               Illustrations
             </Link>
           </div>
-          <DisplayCard
+          <DisplayCard2
             title="EduSponsor"
             desc={`Amet minim mollit non deserunt ullamco est sit aliqua dolor do
               amet sint. Velit officia consequat duis enim velit mollit.
@@ -43,9 +43,9 @@ const Works = () => {
               bgColor: "#F04770",
               link: "/work-details",
             }}
-            imgRight={eduBg}
+            imgRight={eduImg}
           />
-          <DisplayCard
+          <DisplayCard2
             title="PayMyBills"
             desc={`Amet minim mollit non deserunt ullamco est sit aliqua dolor do
               amet sint. Velit officia consequat duis enim velit mollit.
@@ -57,9 +57,9 @@ const Works = () => {
               bgColor: "#03B66B",
               link: "/work-details",
             }}
-            imgRight={pmbBg}
+            imgRight={pmbImg}
           />
-          <DisplayCard
+          <DisplayCard2
             title="Digicit"
             desc={`Amet minim mollit non deserunt ullamco est sit aliqua dolor do
               amet sint. Velit officia consequat duis enim velit mollit.
@@ -74,9 +74,9 @@ const Works = () => {
               bgColor: "#F04770",
               link: "/work-details",
             }}
-            imgRight={unknownBg}
+            imgRight={digicitImg}
           />
-          <DisplayCard
+          <DisplayCard2
             title="Estate Management System"
             desc={`Amet minim mollit non deserunt ullamco est sit aliqua dolor do
               amet sint. Velit officia consequat duis enim velit mollit.
@@ -91,9 +91,9 @@ const Works = () => {
               bgColor: "#03B66B",
               link: "/work-details",
             }}
-            imgRight={estateBg}
+            imgRight={residifyImg}
           />
-          <DisplayCard
+          <DisplayCard2
             title="Plato"
             desc={`Amet minim mollit non deserunt ullamco est sit aliqua dolor do
               amet sint. Velit officia consequat duis enim velit mollit.
@@ -105,7 +105,7 @@ const Works = () => {
               bgColor: "#03B66B",
               link: "/work-details",
             }}
-            imgRight={platoBg}
+            imgRight={platoImg}
           />
           <div className="have-project">
             <h2>You have a Project? Let’s discuss it</h2>
@@ -130,13 +130,11 @@ Works.Wrapper = styled.div`
       font-family: Space Grotesk;
       font-style: normal;
       font-weight: bold;
-      font-size: 50px;
+      font-size: 35px;
       line-height: 65px;
-      /* identical to box height, or 130% */
+      /* identical to box height, or 186% */
 
       color: #ffffff;
-      margin-top: 100px;
-      margin-bottom: 50px;
     }
     .links {
       display: flex;

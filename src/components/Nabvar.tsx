@@ -27,6 +27,7 @@ const Navbar = () => {
             <div className="nav-content-inner">
               <div
                 data-aos="fade-left"
+                data-aos-delay="0"
                 className={`nav-item ${
                   window.location.pathname === HOME && "active"
                 }`}
@@ -35,6 +36,7 @@ const Navbar = () => {
               </div>
               <div
                 data-aos="fade-left"
+                data-aos-delay="200"
                 className={`nav-item ${
                   window.location.pathname === ABOUT && "active"
                 }`}
@@ -43,17 +45,23 @@ const Navbar = () => {
               </div>
               <div
                 data-aos="fade-left"
+                data-aos-delay="300"
                 className={`nav-item ${
                   window.location.pathname === WORKS && "active"
                 }`}
               >
                 <a href={WORKS}>My Works</a>
               </div>
-              <div data-aos="fade-left" className="nav-item">
+              <div
+                data-aos="fade-left"
+                data-aos-delay="400"
+                className="nav-item"
+              >
                 <a href="/">My Resume</a>
               </div>
               <div
                 data-aos="fade-left"
+                data-aos-delay="500"
                 className={`nav-item ${
                   window.location.pathname === CONTACT && "active"
                 }`}

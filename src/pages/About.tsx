@@ -9,7 +9,7 @@ const About = () => {
     <div className="container">
       <About.Wrapper>
         <Navbar />
-        <section className="whats-up">
+        <section className="whats-up col-sm-10 mx-auto">
           <div>
             <img src={shayoImg} alt="" />
           </div>

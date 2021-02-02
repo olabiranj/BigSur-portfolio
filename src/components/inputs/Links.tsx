@@ -36,7 +36,9 @@ background: #ffffff;
   border-radius: 40px;
   padding: ${(props) => (props.size === "sm" ? "10px 25px;" : "18px 40px;")}
   font-size: 15px;
-  font-weight: bold;
+  font-family: Axiforma;
+  font-style: normal;
+  font-weight: 500;
   color: #000000;
   color: ${(props) => props.color && props.color};
   ${(props) =>
@@ -52,7 +54,9 @@ background: #ffffff;
   :hover {
     opcaciy: 0.8;
     text-decoration: none;
-    color: #f2f245;
+    color: #000000;
+  color: ${(props) => props.color && props.color};
+  
   }
 `;
 

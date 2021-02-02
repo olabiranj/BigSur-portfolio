@@ -27,13 +27,13 @@ const Home = () => {
     <div className="container">
       <Home.Wrapper>
         <Navbar />
-        <section className="header">
+        <section className="header col-md-11 mx-auto">
           <div className="header-content">
             <p>Hello, I'm</p>
             <h1>
               <span>Juli</span>anna
             </h1>
-            <h5 className="header-desc col-sm-10">
+            <h5 className="header-desc col-sm-11">
               I specialize in designing and developing user interfaces and
               digital products. I don’t restrict myself to design. The blend of
               design, user experience, marketing, and business is where I feel I
@@ -76,199 +76,205 @@ const Home = () => {
             </div>
           </div>
         </section>
-        <section className="what-i-do">
-          <div className="content">
-            <h2>What I do in Nutshell</h2>
-            <p className="col-sm-8">
+        <div className="col-md-10 mx-auto">
+          <section className="what-i-do">
+            <div className="content">
+              <h2>What I do in Nutshell</h2>
+              <p className="col-sm-11">
+                I specialize in designing and developing user interfaces and
+                digital products. I don’t restrict myself to design.{" "}
+              </p>
+              <div className="row">
+                <div className="col-sm-4">
+                  <div className="icon-container">
+                    <img className="bg-1" src={bg1Img} alt="bg-1" />
+                    <img className="bg-2" src={bg2Img} alt="bg-2" />
+                    <img className="logo-icon" src={userImg} alt="logo-icon" />
+                  </div>
+                  <h3>User Research</h3>
+                  <p>
+                    I specialize in designing and developing user interfaces and
+                    digital products. I don’t restrict myself to design.{" "}
+                  </p>
+                </div>
+                <div className="col-sm-4">
+                  <div className="icon-container">
+                    <img className="bg-1" src={bg1Img} alt="bg-1" />
+                    <img className="bg-2" src={bg2Img} alt="bg-2" />
+                    <img
+                      className="logo-icon"
+                      src={settingsImg}
+                      alt="logo-icon"
+                    />
+                  </div>
+                  <h3>Design Strategy</h3>
+                  <p>
+                    I specialize in designing and developing user interfaces and
+                    digital products. I don’t restrict myself to design.
+                  </p>
+                </div>
+                <div className="col-sm-4">
+                  <div className="icon-container">
+                    <img className="bg-1" src={bg1Img} alt="bg-1" />
+                    <img className="bg-2" src={bg2Img} alt="bg-2" />
+                    <img className="logo-icon" src={bookImg} alt="logo-icon" />
+                  </div>
+                  <h3>Wireframing & Prototyping</h3>
+                  <p>
+                    I specialize in designing and developing user interfaces and
+                    digital products. I don’t restrict myself to design.{" "}
+                  </p>
+                </div>
+              </div>
+            </div>
+          </section>
+          <section className="my-works">
+            <h2>My Works</h2>
+            <p className="col-sm-9">
               I specialize in designing and developing user interfaces and
-              digital products. I don’t restrict myself to design.{" "}
+              digital products. I don’t restrict myself to design.
+            </p>
+
+            <DisplayCard
+              title="EduSponsor"
+              desc={`Amet minim mollit non deserunt ullamco est sit aliqua dolor do
+              amet sint. Velit officia consequat duis enim velit mollit.
+              Exercitation veniam consequat sunt nostrud amet.`}
+              topBtn={[
+                { text: "Mobile", textColor: "#3347FF", bgColor: "#CED3FF" },
+              ]}
+              button={{
+                text: "Case Study",
+                textColor: "#ffffff",
+                bgColor: "#F04770",
+                link: "/work-details",
+              }}
+              imgRight={eduBg}
+            />
+            <DisplayCard
+              title="PayMyBills"
+              desc={`Amet minim mollit non deserunt ullamco est sit aliqua dolor do
+              amet sint. Velit officia consequat duis enim velit mollit.
+              Exercitation veniam consequat sunt nostrud amet.`}
+              topBtn={[
+                { text: "Mobile", textColor: "#FF6B6B", bgColor: "#FFF1FB" },
+              ]}
+              button={{
+                text: "Case Study",
+                textColor: "#ffffff",
+                bgColor: "#03B66B",
+                link: "/work-details",
+              }}
+              imgRight={pmbBg}
+            />
+            <div className="see-all">
+              <Link bg="#000000" border color="#ffffff" goto={`/works`}>
+                See All
+              </Link>
+            </div>
+          </section>
+          <section className="tools">
+            <div className="container-fluid">
+              <div className="row">
+                <div className="col-md-6">
+                  <h2 className=" mb-4">
+                    “My Working Tools I specialize in designing and developing”
+                  </h2>
+                  <p className="">
+                    I specialize in designing and developing user interfaces and
+                    digital products. I don’t restrict myself to design.{" "}
+                  </p>
+                </div>
+                <div className="col-md-6">
+                  <div className="tools-container">
+                    <p>
+                      <img className="link-icon" src={adobeXD} alt="adobe" />
+                      Adobe XD
+                    </p>
+                    <p>
+                      <img
+                        className="link-icon"
+                        src={adobeIllustr}
+                        alt="adobe"
+                      />
+                      Adobe Illustrator
+                    </p>
+                    <p>
+                      <img className="link-icon" src={adobeAE} alt="adobe" />
+                      Adobe After-Effect
+                    </p>
+                    <p>
+                      <img className="link-icon" src={figma} alt="adobe" />
+                      Figma
+                    </p>
+                    <p>
+                      <img className="link-icon" src={slack} alt="adobe" />
+                      Slack
+                    </p>
+                    <p>
+                      <img className="link-icon" src={zeplin} alt="adobe" />
+                      Zeplin
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+          <section className="publications">
+            <h2>My Publications</h2>
+            <p className="col-md-7 mb-4">
+              I specialize in designing and developing user interfaces and
+              digital products. I don’t restrict myself to design.
             </p>
             <div className="row">
-              <div className="col-sm-4">
-                <div className="icon-container">
-                  <img className="bg-1" src={bg1Img} alt="bg-1" />
-                  <img className="bg-2" src={bg2Img} alt="bg-2" />
-                  <img className="logo-icon" src={userImg} alt="logo-icon" />
+              <div className="col-md-6 px-4">
+                <div className="content">
+                  <img src={betterInt} alt="better interface" />
+                  <div className="text">
+                    <h3>Designing Better Interface</h3>
+                    <p>
+                      Design is the process of creating machines, interactive
+                      systems, buildings, vehicles, software, objects, etc. It
+                      user-centered, i.e. users are at the heart of the design.
+                      It is about creating solutions for people, physical items,
+                      or abstract systems to address a need or a problem. Simply
+                      put, Design is a science of creating things: from
+                      inception to delivery.
+                    </p>
+                  </div>
+                  <div className="circle-btn">
+                    <img src={arrowLeftImg} alt="left" />
+                  </div>
                 </div>
-                <h3>User Research</h3>
-                <p>
-                  I specialize in designing and developing user interfaces and
-                  digital products. I don’t restrict myself to design.{" "}
-                </p>
               </div>
-              <div className="col-sm-4">
-                <div className="icon-container">
-                  <img className="bg-1" src={bg1Img} alt="bg-1" />
-                  <img className="bg-2" src={bg2Img} alt="bg-2" />
-                  <img
-                    className="logo-icon"
-                    src={settingsImg}
-                    alt="logo-icon"
-                  />
-                </div>
-                <h3>Design Strategy</h3>
-                <p>
-                  I specialize in designing and developing user interfaces and
-                  digital products. I don’t restrict myself to design.
-                </p>
-              </div>
-              <div className="col-sm-4">
-                <div className="icon-container">
-                  <img className="bg-1" src={bg1Img} alt="bg-1" />
-                  <img className="bg-2" src={bg2Img} alt="bg-2" />
-                  <img className="logo-icon" src={bookImg} alt="logo-icon" />
-                </div>
-                <h3>Wireframing & Prototyping</h3>
-                <p>
-                  I specialize in designing and developing user interfaces and
-                  digital products. I don’t restrict myself to design.{" "}
-                </p>
-              </div>
-            </div>
-          </div>
-        </section>
-        <section className="my-works">
-          <h2>My Works</h2>
-          <p className="col-sm-7">
-            I specialize in designing and developing user interfaces and digital
-            products. I don’t restrict myself to design.
-          </p>
-
-          <DisplayCard
-            title="EduSponsor"
-            desc={`Amet minim mollit non deserunt ullamco est sit aliqua dolor do
-              amet sint. Velit officia consequat duis enim velit mollit.
-              Exercitation veniam consequat sunt nostrud amet.`}
-            topBtn={[
-              { text: "Mobile", textColor: "#3347FF", bgColor: "#CED3FF" },
-            ]}
-            button={{
-              text: "Case Study",
-              textColor: "#ffffff",
-              bgColor: "#F04770",
-              link: "/work-details",
-            }}
-            imgRight={eduBg}
-          />
-          <DisplayCard
-            title="PayMyBills"
-            desc={`Amet minim mollit non deserunt ullamco est sit aliqua dolor do
-              amet sint. Velit officia consequat duis enim velit mollit.
-              Exercitation veniam consequat sunt nostrud amet.`}
-            topBtn={[
-              { text: "Mobile", textColor: "#FF6B6B", bgColor: "#FFF1FB" },
-            ]}
-            button={{
-              text: "Case Study",
-              textColor: "#ffffff",
-              bgColor: "#03B66B",
-              link: "/work-details",
-            }}
-            imgRight={pmbBg}
-          />
-          <div className="see-all">
-            <Link bg="#000000" border color="#ffffff" goto={`/works`}>
-              See All
-            </Link>
-          </div>
-        </section>
-        <section className="tools">
-          <div className="container-fluid">
-            <div className="row">
-              <div className="col-md-6">
-                <h2 className="col-md-10 mb-4">
-                  “My Working Tools I specialize in designing and developing”
-                </h2>
-                <p className="col-md-10">
-                  I specialize in designing and developing user interfaces and
-                  digital products. I don’t restrict myself to design.{" "}
-                </p>
-              </div>
-              <div className="col-md-6">
-                <div className="tools-container">
-                  <p>
-                    <img className="link-icon" src={adobeXD} alt="adobe" />
-                    Adobe XD
-                  </p>
-                  <p>
-                    <img className="link-icon" src={adobeIllustr} alt="adobe" />
-                    Adobe Illustrator
-                  </p>
-                  <p>
-                    <img className="link-icon" src={adobeAE} alt="adobe" />
-                    Adobe After-Effect
-                  </p>
-                  <p>
-                    <img className="link-icon" src={figma} alt="adobe" />
-                    Figma
-                  </p>
-                  <p>
-                    <img className="link-icon" src={slack} alt="adobe" />
-                    Slack
-                  </p>
-                  <p>
-                    <img className="link-icon" src={zeplin} alt="adobe" />
-                    Zeplin
-                  </p>
+              <div className="col-md-6 px-4">
+                <div className="content">
+                  <img src={betterInt} alt="better interface" />
+                  <div className="text">
+                    <h3>Designing Better Interface</h3>
+                    <p>
+                      Design is the process of creating machines, interactive
+                      systems, buildings, vehicles, software, objects, etc. It
+                      user-centered, i.e. users are at the heart of the design.
+                      It is about creating solutions for people, physical items,
+                      or abstract systems to address a need or a problem. Simply
+                      put, Design is a science of creating things: from
+                      inception to delivery.
+                    </p>
+                  </div>
+                  <div className="circle-btn">
+                    <img src={arrowLeftImg} alt="left" />
+                  </div>
                 </div>
               </div>
             </div>
-          </div>
-        </section>
-        <section className="publications">
-          <h2>My Publications</h2>
-          <p className="col-md-7 mb-4">
-            I specialize in designing and developing user interfaces and digital
-            products. I don’t restrict myself to design.
-          </p>
-          <div className="row">
-            <div className="col-md-6 px-4">
-              <div className="content">
-                <img src={betterInt} alt="better interface" />
-                <div className="text">
-                  <h3>Designing Better Interface</h3>
-                  <p>
-                    Design is the process of creating machines, interactive
-                    systems, buildings, vehicles, software, objects, etc. It
-                    user-centered, i.e. users are at the heart of the design. It
-                    is about creating solutions for people, physical items, or
-                    abstract systems to address a need or a problem. Simply put,
-                    Design is a science of creating things: from inception to
-                    delivery.
-                  </p>
-                </div>
-                <div className="circle-btn">
-                  <img src={arrowLeftImg} alt="left" />
-                </div>
-              </div>
+            <div className="see-all">
+              <Link bg="#000000" border color="#ffffff">
+                See All
+              </Link>
             </div>
-            <div className="col-md-6 px-4">
-              <div className="content">
-                <img src={betterInt} alt="better interface" />
-                <div className="text">
-                  <h3>Designing Better Interface</h3>
-                  <p>
-                    Design is the process of creating machines, interactive
-                    systems, buildings, vehicles, software, objects, etc. It
-                    user-centered, i.e. users are at the heart of the design. It
-                    is about creating solutions for people, physical items, or
-                    abstract systems to address a need or a problem. Simply put,
-                    Design is a science of creating things: from inception to
-                    delivery.
-                  </p>
-                </div>
-                <div className="circle-btn">
-                  <img src={arrowLeftImg} alt="left" />
-                </div>
-              </div>
-            </div>
-          </div>
-          <div className="see-all">
-            <Link bg="#000000" border color="#ffffff">
-              See All
-            </Link>
-          </div>
-        </section>
+          </section>
+        </div>
         <Footer />
       </Home.Wrapper>
     </div>
@@ -326,7 +332,7 @@ Home.Wrapper = styled.div`
         font-size: 18px;
         line-height: 40px;
         /* or 222% */
-
+        margin-left: -10px;
         color: #bcbcbc;
       }
       .links {
@@ -336,7 +342,7 @@ Home.Wrapper = styled.div`
     }
     .zagImg {
       position: absolute;
-      left: 60px;
+      left: -10px;
       top: 300px;
       z-index: -1;
     }
@@ -500,10 +506,11 @@ Home.Wrapper = styled.div`
               align-items: center;
             }
             p {
-              padding: 10px 30px;
+              padding: 8px 25px;
               border-radius: 40px;
               border: 1px solid #ffffff;
-              margin-right: 20px;
+              margin-right: 15px;
+              margin-bottom: 25px;
               font-family: Axiforma;
               font-style: normal;
               font-weight: normal;
@@ -622,14 +629,13 @@ Home.Wrapper = styled.div`
         }
       }
       .icon-links {
-        right: 10px;
+        display: none;
       }
       .zagImg {
-        left: 10px;
-        top: 300px;
+        display: none;
       }
       .triImg {
-        top: 130px;
+        display: none;
       }
     }
   }

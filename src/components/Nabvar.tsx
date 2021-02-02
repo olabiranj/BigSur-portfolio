@@ -106,15 +106,15 @@ Navbar.Wrapper = styled.div`
       }
     }
     .nav-content {
-      height: 100%;
+      height: 80%;
       display: flex;
       justify-content: center;
       align-items: center;
       .nav-content-inner {
-        height: 60%;
+        height: 80%;
         display: flex;
         justify-content: space-between;
-        align-items: center;
+        align-items: flex-start;
         flex-direction: column;
         .nav-item {
           a {
@@ -150,6 +150,14 @@ Navbar.Wrapper = styled.div`
       right: 60px;
       top: 150px;
       z-index: -1;
+    }
+  }
+  @media (max-width: 420px) {
+    .zagImg {
+      display: none;
+    }
+    .triImg {
+      display: none;
     }
   }
 `;

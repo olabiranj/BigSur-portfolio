@@ -15,7 +15,7 @@ const Contact = () => {
     <div className="container">
       <Contact.Wrapper>
         <Navbar />
-        <section className="contact">
+        <section className="contact col-sm-10 mx-auto">
           <div className="row">
             <div className="col-md-6 mb-4">
               <h2>Get a Quote</h2>

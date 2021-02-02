@@ -12,7 +12,7 @@ const WorkDetails = () => {
     <div className="container">
       <WorkDetails.Wrapper>
         <Navbar />
-        <section className="work-details">
+        <section className="work-details col-sm-10 mx-auto">
           <h5 onClick={() => history.goBack()}>
             <i className="fas fa-chevron-left"></i>
           </h5>

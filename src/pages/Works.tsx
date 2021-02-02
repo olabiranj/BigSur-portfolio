@@ -15,7 +15,7 @@ const Works = () => {
     <div className="container">
       <Works.Wrapper>
         <Navbar />
-        <section className="works">
+        <section className="works col-sm-10 mx-auto">
           <h2>My Works</h2>
           <div className="links mt-4">
             <Link>All Project</Link>

@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import styled from "styled-components";
 import Navbar from "../components/Nabvar";
 import Footer from "../components/Footer";
@@ -11,102 +11,133 @@ import platoImg from "../assets/img/platoCard.png";
 import residifyImg from "../assets/img/residifyCard.png";
 
 const Works = () => {
+  let [views, setViews] = useState(0);
   return (
     <div className="container">
       <Works.Wrapper>
         <Navbar />
-        <section className="works col-md-10 mx-auto">
+        <section className="works col-md-10 mx-auto mt-4">
           <h2 className="head-text">My Works</h2>
           <div className="links mt-4">
-            <Link>All Project</Link>
-            <Link bg="#000000" color="#ffffff" border={true}>
+            <Link func={() => setViews(0)}>All Project</Link>
+            <Link
+              func={() => setViews(2)}
+              bg="#000000"
+              color="#ffffff"
+              border={true}
+            >
               Mobile App
             </Link>
-            <Link bg="#000000" color="#ffffff" border={true}>
+            <Link
+              func={() => setViews(1)}
+              bg="#000000"
+              color="#ffffff"
+              border={true}
+            >
               Website
             </Link>
-            <Link bg="#000000" color="#ffffff" border={true}>
+            <Link
+              func={() => setViews(0)}
+              bg="#000000"
+              color="#ffffff"
+              border={true}
+            >
               Illustrations
             </Link>
           </div>
-          <DisplayCard2
-            title="EduSponsor"
-            desc={`Amet minim mollit non deserunt ullamco est sit aliqua dolor do
+          {(views === 0 || views === 2) && (
+            <DisplayCard2
+              title="EduSponsor"
+              desc={`Amet minim mollit non deserunt ullamco est sit aliqua dolor do
               amet sint. Velit officia consequat duis enim velit mollit.
               Exercitation veniam consequat sunt nostrud amet.`}
-            topBtn={[
-              { text: "Mobile", textColor: "#3347FF", bgColor: "#CED3FF" },
-            ]}
-            button={{
-              text: "Case Study",
-              textColor: "#ffffff",
-              bgColor: "#F04770",
-              link: "/work-details",
-            }}
-            imgRight={eduImg}
-          />
-          <DisplayCard2
-            title="PayMyBills"
-            desc={`Amet minim mollit non deserunt ullamco est sit aliqua dolor do
+              topBtn={[
+                { text: "Mobile", textColor: "#3347FF", bgColor: "#CED3FF" },
+              ]}
+              button={{
+                text: "Case Study",
+                textColor: "#ffffff",
+                bgColor: "#F04770",
+                link: "/work-details",
+              }}
+              imgRight={eduImg}
+            />
+          )}
+          {(views === 0 || views === 1) && (
+            <DisplayCard2
+              title="PayMyBills"
+              desc={`Amet minim mollit non deserunt ullamco est sit aliqua dolor do
               amet sint. Velit officia consequat duis enim velit mollit.
               Exercitation veniam consequat sunt nostrud amet.`}
-            topBtn={[{ text: "Web", textColor: "#FF6B6B", bgColor: "#FFF1FB" }]}
-            button={{
-              text: "Case Study",
-              textColor: "#ffffff",
-              bgColor: "#03B66B",
-              link: "/work-details",
-            }}
-            imgRight={pmbImg}
-          />
-          <DisplayCard2
-            title="Digicit"
-            desc={`Amet minim mollit non deserunt ullamco est sit aliqua dolor do
+              topBtn={[
+                { text: "Web", textColor: "#FF6B6B", bgColor: "#FFF1FB" },
+              ]}
+              button={{
+                text: "Case Study",
+                textColor: "#ffffff",
+                bgColor: "#03B66B",
+                link: "/work-details",
+              }}
+              imgRight={pmbImg}
+            />
+          )}
+          {(views === 0 || views === 1 || views === 2) && (
+            <DisplayCard2
+              title="Digicit"
+              desc={`Amet minim mollit non deserunt ullamco est sit aliqua dolor do
               amet sint. Velit officia consequat duis enim velit mollit.
               Exercitation veniam consequat sunt nostrud amet.`}
-            topBtn={[
-              { text: "Web", textColor: "#FF6B6B", bgColor: "#FFF1FB" },
-              { text: "Mobile", textColor: "#3347FF", bgColor: "#CED3FF" },
-            ]}
-            button={{
-              text: "Case Study",
-              textColor: "#ffffff",
-              bgColor: "#F04770",
-              link: "/work-details",
-            }}
-            imgRight={digicitImg}
-          />
-          <DisplayCard2
-            title="Estate Management System"
-            desc={`Amet minim mollit non deserunt ullamco est sit aliqua dolor do
+              topBtn={[
+                { text: "Web", textColor: "#FF6B6B", bgColor: "#FFF1FB" },
+                { text: "Mobile", textColor: "#3347FF", bgColor: "#CED3FF" },
+              ]}
+              button={{
+                text: "Case Study",
+                textColor: "#ffffff",
+                bgColor: "#F04770",
+                link: "/work-details",
+              }}
+              imgRight={digicitImg}
+            />
+          )}
+          {(views === 0 || views === 1 || views === 2) && (
+            <DisplayCard2
+              title="Estate Management System"
+              desc={`Amet minim mollit non deserunt ullamco est sit aliqua dolor do
               amet sint. Velit officia consequat duis enim velit mollit.
               Exercitation veniam consequat sunt nostrud amet.`}
-            topBtn={[
-              { text: "Web", textColor: "#FF6B6B", bgColor: "#FFF1FB" },
-              { text: "Mobile", textColor: "#3347FF", bgColor: "#CED3FF" },
-            ]}
-            button={{
-              text: "Case Study",
-              textColor: "#ffffff",
-              bgColor: "#03B66B",
-              link: "/work-details",
-            }}
-            imgRight={residifyImg}
-          />
-          <DisplayCard2
-            title="Plato"
-            desc={`Amet minim mollit non deserunt ullamco est sit aliqua dolor do
+              topBtn={[
+                { text: "Web", textColor: "#FF6B6B", bgColor: "#FFF1FB" },
+                { text: "Mobile", textColor: "#3347FF", bgColor: "#CED3FF" },
+              ]}
+              button={{
+                text: "Case Study",
+                textColor: "#ffffff",
+                bgColor: "#03B66B",
+                link: "/work-details",
+              }}
+              imgRight={residifyImg}
+            />
+          )}
+          {(views === 0 || views === 1) && (
+            <DisplayCard2
+              title="Plato"
+              desc={`Amet minim mollit non deserunt ullamco est sit aliqua dolor do
               amet sint. Velit officia consequat duis enim velit mollit.
               Exercitation veniam consequat sunt nostrud amet.`}
-            topBtn={[{ text: "Web", textColor: "#FF6B6B", bgColor: "#FFF1FB" }]}
-            button={{
-              text: "Case Study",
-              textColor: "#ffffff",
-              bgColor: "#03B66B",
-              link: "/work-details",
-            }}
-            imgRight={platoImg}
-          />
+              topBtn={[
+                { text: "Web", textColor: "#FF6B6B", bgColor: "#FFF1FB" },
+              ]}
+              button={{
+                text: "Case Study",
+                textColor: "#ffffff",
+                bgColor: "#03B66B",
+                link: "/work-details",
+              }}
+              imgRight={platoImg}
+            />
+          )}
+
           <div className="have-project">
             <h2>You have a Project? Let’s discuss it</h2>
             <div className="contact-link">

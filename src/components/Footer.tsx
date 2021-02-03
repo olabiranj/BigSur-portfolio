@@ -61,6 +61,20 @@ Footer.Wrapper = styled.section`
       }
     }
   }
+  @media (max-width: 420px) {
+    .img {
+      img {
+        height: 30px;
+      }
+    }
+    .icon-links {
+      div {
+        height: 30px;
+        width: 30px;
+        border-radius: 50%;
+      }
+    }
+  }
 `;
 
 export default Footer;

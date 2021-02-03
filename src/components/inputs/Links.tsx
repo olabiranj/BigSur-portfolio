@@ -6,7 +6,7 @@ interface CustomLinkProps {
   color?: string;
   size?: string;
   children: any;
-  goto?: string;
+  goto?: string | null | undefined;
   border?: boolean;
   disable?: boolean;
   func?: any;
@@ -16,7 +16,7 @@ const Link = (props: CustomLinkProps) => {
   return (
     <Link.Wrapper
       onClick={func ? () => func() : () => {}}
-      href={goto ? goto : ""}
+      href={goto ? goto : undefined}
       bg={bg}
       color={color}
       size={size}
@@ -29,7 +29,7 @@ const Link = (props: CustomLinkProps) => {
 };
 
 Link.Wrapper = styled.a<CustomLinkProps>`
-background: #ffffff;
+  background: #ffffff;
   background: ${(props) => props.bg && props.bg};
   ${(props) => props.border && "border: 1px solid  #ffffff;"}
   box-sizing: border-box;
@@ -38,6 +38,7 @@ background: #ffffff;
   font-size: 15px;
   font-family: Axiforma;
   font-style: normal;
+  cursor: pointer;
   font-weight: 500;
   color: #000000;
   color: ${(props) => props.color && props.color};
@@ -57,6 +58,10 @@ background: #ffffff;
     color: #000000;
   color: ${(props) => props.color && props.color};
   
+  }
+  @media (max-width: 420px) {
+    font-size: 10px;
+    padding: ${(props) => (props.size === "sm" ? "5px 14px;" : "11px 25px;")}
   }
 `;
 

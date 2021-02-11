@@ -78,7 +78,7 @@ const WorkDetails = () => {
 
 WorkDetails.Wrapper = styled.div`
   .work-details {
-    margin-top: 30px;
+    margin-top: 60px;
     h5 {
       cursor: pointer;
     }

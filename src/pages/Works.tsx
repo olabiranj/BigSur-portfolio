@@ -3,7 +3,7 @@ import styled from "styled-components";
 import Navbar from "../components/Nabvar";
 import Footer from "../components/Footer";
 import Link from "../components/inputs/Links";
-import DisplayCard2 from "../components/DisplayCard2";
+import DisplayCard from "../components/DisplayCard";
 import eduImg from "../assets/img/eduCard.png";
 import pmbImg from "../assets/img/pmbCard.png";
 import digicitImg from "../assets/img/digicitCard.png";
@@ -16,37 +16,44 @@ const Works = () => {
     <div className="container">
       <Works.Wrapper>
         <Navbar />
-        <section className="works col-md-10 mx-auto mt-4">
+        <section className="works col-md-10 mx-auto">
           <h2 className="head-text">My Works</h2>
           <div className="links mt-4">
-            <Link func={() => setViews(0)}>All Project</Link>
+            <Link
+              bg={views === 0 ? "#000000" : ""}
+              color={views === 0 ? "#ffffff" : ""}
+              func={() => setViews(0)}
+              border={true}
+            >
+              All Project
+            </Link>
             <Link
               func={() => setViews(2)}
-              bg="#000000"
-              color="#ffffff"
+              bg={views === 2 ? "#000000" : ""}
+              color={views === 2 ? "#ffffff" : ""}
               border={true}
             >
               Mobile App
             </Link>
             <Link
               func={() => setViews(1)}
-              bg="#000000"
-              color="#ffffff"
+              bg={views === 1 ? "#000000" : ""}
+              color={views === 1 ? "#ffffff" : ""}
               border={true}
             >
               Website
             </Link>
             <Link
-              func={() => setViews(0)}
-              bg="#000000"
-              color="#ffffff"
+              func={() => setViews(3)}
+              bg={views === 3 ? "#000000" : ""}
+              color={views === 3 ? "#ffffff" : ""}
               border={true}
             >
               Illustrations
             </Link>
           </div>
           {(views === 0 || views === 2) && (
-            <DisplayCard2
+            <DisplayCard
               title="EduSponsor"
               desc={`Amet minim mollit non deserunt ullamco est sit aliqua dolor do
               amet sint. Velit officia consequat duis enim velit mollit.
@@ -64,7 +71,7 @@ const Works = () => {
             />
           )}
           {(views === 0 || views === 1) && (
-            <DisplayCard2
+            <DisplayCard
               title="PayMyBills"
               desc={`Amet minim mollit non deserunt ullamco est sit aliqua dolor do
               amet sint. Velit officia consequat duis enim velit mollit.
@@ -82,7 +89,7 @@ const Works = () => {
             />
           )}
           {(views === 0 || views === 1 || views === 2) && (
-            <DisplayCard2
+            <DisplayCard
               title="Digicit"
               desc={`Amet minim mollit non deserunt ullamco est sit aliqua dolor do
               amet sint. Velit officia consequat duis enim velit mollit.
@@ -101,7 +108,7 @@ const Works = () => {
             />
           )}
           {(views === 0 || views === 1 || views === 2) && (
-            <DisplayCard2
+            <DisplayCard
               title="Estate Management System"
               desc={`Amet minim mollit non deserunt ullamco est sit aliqua dolor do
               amet sint. Velit officia consequat duis enim velit mollit.
@@ -120,7 +127,7 @@ const Works = () => {
             />
           )}
           {(views === 0 || views === 1) && (
-            <DisplayCard2
+            <DisplayCard
               title="Plato"
               desc={`Amet minim mollit non deserunt ullamco est sit aliqua dolor do
               amet sint. Velit officia consequat duis enim velit mollit.
@@ -142,7 +149,12 @@ const Works = () => {
             <h2>You have a Project? Let’s discuss it</h2>
             <div className="contact-link">
               <div>
-                <Link bg="#000000" color="#ffffff" border={true}>
+                <Link
+                  goto={`/contact`}
+                  bg="#000000"
+                  color="#ffffff"
+                  border={true}
+                >
                   Contact Me
                 </Link>
               </div>
@@ -157,6 +169,7 @@ const Works = () => {
 
 Works.Wrapper = styled.div`
   .works {
+    margin-top: 70px;
     h2 {
       font-family: Space Grotesk;
       font-style: normal;

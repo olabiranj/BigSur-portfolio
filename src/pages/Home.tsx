@@ -18,7 +18,7 @@ import zeplin from "../assets/img/zeplin.png";
 import betterInt from "../assets/img/Rectangle 20.png";
 import arrowLeftImg from "../assets/img/arrow-left.png";
 import Footer from "../components/Footer";
-import DisplayCard2 from "../components/DisplayCard2";
+import DisplayCard from "../components/DisplayCard";
 import eduImg from "../assets/img/eduCard.png";
 import pmbImg from "../assets/img/pmbCard.png";
 
@@ -135,7 +135,7 @@ const Home = () => {
               digital products. I don’t restrict myself to design.
             </p>
 
-            <DisplayCard2
+            <DisplayCard
               title="EduSponsor"
               desc={`Amet minim mollit non deserunt ullamco est sit aliqua dolor do
               amet sint. Velit officia consequat duis enim velit mollit.
@@ -151,7 +151,7 @@ const Home = () => {
               }}
               imgRight={eduImg}
             />
-            <DisplayCard2
+            <DisplayCard
               title="PayMyBills"
               desc={`Amet minim mollit non deserunt ullamco est sit aliqua dolor do
               amet sint. Velit officia consequat duis enim velit mollit.
@@ -291,6 +291,7 @@ Home.Wrapper = styled.div`
     .header-content {
       height: fit-content;
       width: 90%;
+      margin-top: 50px;
       p {
         font-family: Axiforma;
         font-style: normal;
@@ -342,20 +343,20 @@ Home.Wrapper = styled.div`
     }
     .zagImg {
       position: absolute;
-      left: -10px;
+      left: -110px;
       top: 300px;
       z-index: -1;
     }
     .triImg {
       position: absolute;
-      right: 60px;
+      right: -60px;
       top: 150px;
       z-index: -1;
     }
     .icon-links {
       position: absolute;
       bottom: 90px;
-      right: 70px;
+      right: -60px;
       dispaly: flex;
       flex-direction: column;
       height: fit-content;
@@ -561,6 +562,7 @@ Home.Wrapper = styled.div`
           .text {
             padding-left: 20px;
             padding-right: 20px;
+            margin-bottom: 70px;
             h3 {
               font-family: Space Grotesk;
               font-style: normal;

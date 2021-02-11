@@ -24,7 +24,7 @@ const DisplayCard = (props: DisplayCardProps) => {
     <DisplayCard.Wrapper button={button} imgRight={imgRight}>
       <div className="container-fluid">
         <div className="row">
-          <div className="col-md-6">
+          <div className="col-lg-6">
             <div className="card-desc">
               {topBtn?.map((dt) => (
                 <Link
@@ -48,7 +48,7 @@ const DisplayCard = (props: DisplayCardProps) => {
               </Link>
             </div>
           </div>
-          <div className="col-md-6 img-bg"></div>
+          <div className="col-lg-6 img-bg"></div>
         </div>
       </div>
     </DisplayCard.Wrapper>
@@ -57,38 +57,38 @@ const DisplayCard = (props: DisplayCardProps) => {
 
 DisplayCard.Wrapper = styled.div<DisplayCardProps>`
   width: 100%;
-  min-height: 429px;
+  height: fit-content;
   border-radius: 30px;
   background: #090909;
   margin-bottom: 50px;
   border: 1px solid rgba(63, 63, 63, 0.78);
+  background: url(${(props) => props.imgRight});
+  padding: 15px;
+  padding-left: 25px;
+  background-size: cover;
+  background-repeat: no-repeat;
   .row {
+    margin-bottom: 25px;
     .card-desc {
-      margin: 40px;
       h2 {
-        margin-top: 30px;
-        font-size: 30px;
+        font-size: 25px;
       }
       p {
         font-family: Axiforma;
         font-style: normal;
         font-weight: normal;
-        font-size: 18px;
-        line-height: 40px;
+        font-size: 15px;
+        line-height: 30px;
         /* or 222% */
 
         color: #bcbcbc;
         margin-left: 0;
-        margin-bottom: 60px;
+        margin-bottom: 50px;
       }
     }
-    .img-bg {
-      background: url(${(props) => props.imgRight});
-      background-size: cover;
-      border-top-right-radius: 30px;
-      border-bottom-right-radius: 30px;
-      min-height: 300px;
-    }
+  }
+  @media (max-width: 990px) {
+    background: #090909;
   }
 `;
 

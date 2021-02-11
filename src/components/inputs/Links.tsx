@@ -34,8 +34,8 @@ Link.Wrapper = styled.a<CustomLinkProps>`
   ${(props) => props.border && "border: 1px solid  #ffffff;"}
   box-sizing: border-box;
   border-radius: 40px;
-  padding: ${(props) => (props.size === "sm" ? "10px 25px;" : "18px 40px;")}
-  font-size: 15px;
+  padding: ${(props) => (props.size === "sm" ? "10px 25px;" : "18px 37px;")}
+  font-size: ${(props) => (props.size === "sm" ? "12px;" : "14px;")}
   font-family: Axiforma;
   font-style: normal;
   cursor: pointer;

@@ -57,7 +57,9 @@ const Navbar = () => {
                 data-aos-delay="400"
                 className="nav-item"
               >
-                <a href="/">My Resume</a>
+                <a href="https://drive.google.com/file/d/19-VKEu926ImPwu2VmLWq-BudZZjfYbBG/view">
+                  My Resume
+                </a>
               </div>
               <div
                 data-aos="fade-left"

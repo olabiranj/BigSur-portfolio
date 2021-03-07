@@ -14,22 +14,22 @@ const Footer = () => {
         </div>
         <div className="icon-links">
           <div>
-            <a href="/">
+            <a href="https://twitter.com/julee_baby">
               <i className="fab fa-twitter"></i>
             </a>
           </div>
           <div>
-            <a href="/">
+            <a href="https://www.behance.net/ogunladoluwasa">
               <i className="fab fa-behance"></i>
             </a>
           </div>
           <div>
-            <a href="/">
+            <a href="https://dribbble.com/Jullly">
               <i className="fab fa-dribbble"></i>
             </a>
           </div>
           <div>
-            <a href="/">
+            <a href="https://www.linkedin.com/in/ogunladeoluwasayo/">
               <i className="fab fa-facebook-f"></i>
             </a>
           </div>

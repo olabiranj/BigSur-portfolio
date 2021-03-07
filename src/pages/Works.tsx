@@ -9,6 +9,7 @@ import pmbImg from "../assets/img/pmbCard.png";
 import digicitImg from "../assets/img/digicitCard.png";
 import platoImg from "../assets/img/platoCard.png";
 import residifyImg from "../assets/img/residifyCard.png";
+import r4lImg from "../assets/img/r4l.png";
 
 const Works = () => {
   let [views, setViews] = useState(0);
@@ -20,8 +21,8 @@ const Works = () => {
           <h2 className="head-text">My Works</h2>
           <div className="links mt-4">
             <Link
-              color={views === 0 ? "#000000" : ""}
-              bg={views === 0 ? "#ffffff" : ""}
+              bg={views === 0 ? "" : "#000000"}
+              color={views === 0 ? "" : "#ffffff"}
               func={() => setViews(0)}
               border={true}
             >
@@ -29,24 +30,24 @@ const Works = () => {
             </Link>
             <Link
               func={() => setViews(2)}
-              color={views === 2 ? "#000000" : ""}
-              bg={views === 2 ? "#ffffff" : ""}
+              bg={views === 2 ? "" : "#000000"}
+              color={views === 2 ? "" : "#ffffff"}
               border={true}
             >
               Mobile App
             </Link>
             <Link
               func={() => setViews(1)}
-              color={views === 1 ? "#000000" : ""}
-              bg={views === 1 ? "#ffffff" : ""}
+              bg={views === 1 ? "" : "#000000"}
+              color={views === 1 ? "" : "#ffffff"}
               border={true}
             >
               Website
             </Link>
             <Link
               func={() => setViews(3)}
-              color={views === 3 ? "#000000" : ""}
-              bg={views === 3 ? "#ffffff" : ""}
+              bg={views === 3 ? "" : "#000000"}
+              color={views === 3 ? "" : "#ffffff"}
               border={true}
             >
               Illustrations
@@ -71,22 +72,38 @@ const Works = () => {
             />
           )}
           {(views === 0 || views === 1) && (
-            <DisplayCard
-              title="PayMyBills"
-              desc={`Amet minim mollit non deserunt ullamco est sit aliqua dolor do
+            <>
+              <DisplayCard
+                title="PayMyBills"
+                desc={`Amet minim mollit non deserunt ullamco est sit aliqua dolor do
               amet sint. Velit officia consequat duis enim velit mollit.
               Exercitation veniam consequat sunt nostrud amet.`}
-              topBtn={[
-                { text: "Web", textColor: "#FF6B6B", bgColor: "#FFF1FB" },
-              ]}
-              button={{
-                text: "Case Study",
-                textColor: "#ffffff",
-                bgColor: "#03B66B",
-                link: "/work-details",
-              }}
-              imgRight={pmbImg}
-            />
+                topBtn={[
+                  { text: "Web", textColor: "#FF6B6B", bgColor: "#FFF1FB" },
+                ]}
+                button={{
+                  text: "Case Study",
+                  textColor: "#ffffff",
+                  bgColor: "#03B66B",
+                  link: "/work-details",
+                }}
+                imgRight={pmbImg}
+              />
+              <DisplayCard
+                title="Rent4Less"
+                desc={`Rent4Less is a rental scheme designed to provide a flexible way to rent homes. With this scheme, you can now spread out the payment for apartments in choice locations, by  on a monthly basis.`}
+                topBtn={[
+                  { text: "Web", textColor: "#FF6B6B", bgColor: "#FFF1FB" },
+                ]}
+                button={{
+                  text: "Case Study",
+                  textColor: "#ffffff",
+                  bgColor: "#ED6638",
+                  link: "/work-details",
+                }}
+                imgRight={r4lImg}
+              />
+            </>
           )}
           {(views === 0 || views === 1 || views === 2) && (
             <DisplayCard

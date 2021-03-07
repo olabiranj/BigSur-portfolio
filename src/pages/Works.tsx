@@ -20,8 +20,8 @@ const Works = () => {
           <h2 className="head-text">My Works</h2>
           <div className="links mt-4">
             <Link
-              bg={views === 0 ? "#000000" : ""}
-              color={views === 0 ? "#ffffff" : ""}
+              color={views === 0 ? "#000000" : ""}
+              bg={views === 0 ? "#ffffff" : ""}
               func={() => setViews(0)}
               border={true}
             >
@@ -29,24 +29,24 @@ const Works = () => {
             </Link>
             <Link
               func={() => setViews(2)}
-              bg={views === 2 ? "#000000" : ""}
-              color={views === 2 ? "#ffffff" : ""}
+              color={views === 2 ? "#000000" : ""}
+              bg={views === 2 ? "#ffffff" : ""}
               border={true}
             >
               Mobile App
             </Link>
             <Link
               func={() => setViews(1)}
-              bg={views === 1 ? "#000000" : ""}
-              color={views === 1 ? "#ffffff" : ""}
+              color={views === 1 ? "#000000" : ""}
+              bg={views === 1 ? "#ffffff" : ""}
               border={true}
             >
               Website
             </Link>
             <Link
               func={() => setViews(3)}
-              bg={views === 3 ? "#000000" : ""}
-              color={views === 3 ? "#ffffff" : ""}
+              color={views === 3 ? "#000000" : ""}
+              bg={views === 3 ? "#ffffff" : ""}
               border={true}
             >
               Illustrations

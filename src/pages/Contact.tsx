@@ -20,9 +20,9 @@ const Contact = () => {
             <div className="col-md-6 mb-4">
               <h2>Get a Quote</h2>
               <p>
-                Amet minim mollit non deserunt ullamco est sit aliqua dolor do
-                amet sint. Velit officia consequat duis enim velit mollit.
-                Exercitation veniam consequat sunt nostrud amet.
+                I am always open to full-time & freelance opportunities. Please
+                send me a message if you have any inquiries and I will respond
+                to you ask soon as possible.
               </p>
               <div>
                 <a href="mailto:ogunladeoluwasayo@gmail.com">

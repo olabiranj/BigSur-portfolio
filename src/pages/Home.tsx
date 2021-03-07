@@ -16,11 +16,12 @@ import figma from "../assets/img/1_nUZs178q_SxL7NbW7mE10A 2.png";
 import slack from "../assets/img/slack.png";
 import zeplin from "../assets/img/zeplin.png";
 import betterInt from "../assets/img/Rectangle 20.png";
+import uiuxImg from "../assets/img/Rectangle 22.png";
 import arrowLeftImg from "../assets/img/arrow-left.png";
 import Footer from "../components/Footer";
 import DisplayCard from "../components/DisplayCard";
 import eduImg from "../assets/img/eduCard.png";
-import pmbImg from "../assets/img/pmbCard.png";
+import r4lImg from "../assets/img/r4l.png";
 
 const Home = () => {
   return (
@@ -81,8 +82,9 @@ const Home = () => {
             <div className="content">
               <h2>What I do in Nutshell</h2>
               <p className="col-sm-11">
-                I specialize in designing and developing user interfaces and
-                digital products. I don’t restrict myself to design.{" "}
+                “Perfection is achieved, not when there is nothing more to add,
+                but when there is nothing left to take away.”{" "}
+                <b className="text-white">— Antoine de Saint-Exupery.</b>
               </p>
               <div className="row">
                 <div className="col-sm-4">
@@ -93,8 +95,9 @@ const Home = () => {
                   </div>
                   <h3>User Research</h3>
                   <p>
-                    I specialize in designing and developing user interfaces and
-                    digital products. I don’t restrict myself to design.{" "}
+                    Through the use of a suitable user research method, I strive
+                    to understand how users go about performing tasks and
+                    achieving goals.
                   </p>
                 </div>
                 <div className="col-sm-4">
@@ -109,8 +112,9 @@ const Home = () => {
                   </div>
                   <h3>Design Strategy</h3>
                   <p>
-                    I specialize in designing and developing user interfaces and
-                    digital products. I don’t restrict myself to design.
+                    I iteratively seek to redefine problems in an attempt to
+                    identify better alternative strategies and solutions that
+                    might not be instantly apparent.
                   </p>
                 </div>
                 <div className="col-sm-4">
@@ -121,8 +125,9 @@ const Home = () => {
                   </div>
                   <h3>Wireframing & Prototyping</h3>
                   <p>
-                    I specialize in designing and developing user interfaces and
-                    digital products. I don’t restrict myself to design.{" "}
+                    I iteratively seek to redefine problems in an attempt to
+                    identify better alternative strategies and solutions that
+                    might not be instantly apparent.
                   </p>
                 </div>
               </div>
@@ -131,15 +136,13 @@ const Home = () => {
           <section className="my-works">
             <h2>My Works</h2>
             <p className="col-sm-9">
-              I specialize in designing and developing user interfaces and
-              digital products. I don’t restrict myself to design.
+              "There is no such thing as a boring project. There are only boring
+              executions" <span className="text-white"> ― Irene Etzkorn</span>
             </p>
 
             <DisplayCard
               title="EduSponsor"
-              desc={`Amet minim mollit non deserunt ullamco est sit aliqua dolor do
-              amet sint. Velit officia consequat duis enim velit mollit.
-              Exercitation veniam consequat sunt nostrud amet.`}
+              desc={`EduSponsor is born out of a simple but empathetic idea that every deserving academic candidate irrespective of their social and financial status deserves a shot at their desired conventional exam `}
               topBtn={[
                 { text: "Mobile", textColor: "#3347FF", bgColor: "#CED3FF" },
               ]}
@@ -152,10 +155,8 @@ const Home = () => {
               imgRight={eduImg}
             />
             <DisplayCard
-              title="PayMyBills"
-              desc={`Amet minim mollit non deserunt ullamco est sit aliqua dolor do
-              amet sint. Velit officia consequat duis enim velit mollit.
-              Exercitation veniam consequat sunt nostrud amet.`}
+              title="Rent4Less"
+              desc={`Rent4Less is a rental scheme designed to provide a flexible way to rent homes. With this scheme, you can now spread out the payment for apartments in choice locations, by  on a monthly basis.`}
               topBtn={[
                 { text: "Mobile", textColor: "#FF6B6B", bgColor: "#FFF1FB" },
               ]}
@@ -165,7 +166,7 @@ const Home = () => {
                 bgColor: "#03B66B",
                 link: "/work-details",
               }}
-              imgRight={pmbImg}
+              imgRight={r4lImg}
             />
             <div className="see-all">
               <Link bg="#000000" border color="#ffffff" goto={`/works`}>
@@ -178,11 +179,12 @@ const Home = () => {
               <div className="row">
                 <div className="col-md-6">
                   <h2 className=" mb-4">
-                    “My Working Tools I specialize in designing and developing”
+                    “You can’t wait for inspiration, you have to go after it
+                    with a club.”
                   </h2>
                   <p className="">
-                    I specialize in designing and developing user interfaces and
-                    digital products. I don’t restrict myself to design.{" "}
+                    If a design is a mindset, a design tool is the hand of the
+                    mind. Here are the tools I take pleasure in working with;
                   </p>
                 </div>
                 <div className="col-md-6">
@@ -223,8 +225,9 @@ const Home = () => {
           <section className="publications">
             <h2>My Publications</h2>
             <p className="col-md-7 mb-4">
-              I specialize in designing and developing user interfaces and
-              digital products. I don’t restrict myself to design.
+              Through writing, I come to understand my internal psychologies
+              more intimately than through any other form of semantic
+              exploration.
             </p>
             <div className="row">
               <div className="col-md-6 px-4">
@@ -249,17 +252,17 @@ const Home = () => {
               </div>
               <div className="col-md-6 px-4">
                 <div className="content">
-                  <img src={betterInt} alt="better interface" />
+                  <img src={uiuxImg} alt="better interface" />
                   <div className="text">
-                    <h3>Designing Better Interface</h3>
+                    <h3>UI, UX: What’s the difference?</h3>
                     <p>
-                      Design is the process of creating machines, interactive
-                      systems, buildings, vehicles, software, objects, etc. It
-                      user-centered, i.e. users are at the heart of the design.
-                      It is about creating solutions for people, physical items,
-                      or abstract systems to address a need or a problem. Simply
-                      put, Design is a science of creating things: from
-                      inception to delivery.
+                      The line between UX and UI is a pretty thin one; it is
+                      indeed so thin that it is arguably one of the most
+                      discussed issues in recent times. Although there is a
+                      plethora of information on the internet seeking to shed
+                      more light on the UX and UI and corresponding job
+                      descriptions and requirements of these fields, the
+                      boundary between UI and
                     </p>
                   </div>
                   <div className="circle-btn">

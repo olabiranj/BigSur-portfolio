@@ -15,71 +15,57 @@ const About = () => {
           </div>
           <h2>What’s Up?</h2>
           <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque,
-            officiis totam autem laboriosam necessitatibus error asperiores eum
-            ullam, officia libero ea aut nesciunt consectetur vitae repudiandae
-            alias fugit nulla amet!
+            I currently work as a Product designer at Omnibiz inc. , a tech
+            company that helps you closer to your customers located in Lagos,
+            Nigeria.
           </p>
           <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque,
-            officiis totam autem laboriosam necessitatibus error asperiores eum
-            ullam, officia libero ea aut nesciunt consectetur vitae repudiandae
-            alias fugit nulla amet!
+            I love to create fun, innovative, and accessible websites and
+            applications. I enjoy learning new things and constantly seek out
+            new learning opportunities.
           </p>
           <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque,
-            officiis totam autem laboriosam necessitatibus error asperiores eum
-            ullam, officia libero ea aut nesciunt consectetur vitae repudiandae
-            alias fugit nulla amet!
+            My experience as a user experience designer for the past 2 years
+            includes crafting of beautiful websites and mobile applications for
+            clients.
           </p>
           <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque,
-            officiis totam autem laboriosam necessitatibus error asperiores eum
-            ullam!
+            In addition to good visual abilities, I also possess great
+            presentation skills which allow me to successfully present design
+            ideas to stakeholders. My strong conceptualization ability allows me
+            to picture and then bring to life beautiful work. Finally, I have
+            extensive knowledge of wireframe and user flow creation. I know you
+            will agree you have found your next UI/UX Designer upon meeting.
           </p>
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque,
-            officiis totam autem laboriosam necessitatibus error asperiores eum
-            ullam, officia libero ea aut nesciunt consectetur vitae repudiandae
-            alias fugit nulla amet!
-          </p>
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque,
-            officiis totam autem laboriosam necessitatibus error asperiores eum
-            ullam, officia libero ea aut nesciunt consectetur vitae repudiandae
-            alias fugit nulla amet!
-          </p>
+
           <div className="objectives">
             <h3>Objectives</h3>
-            <p>
-              I specialize in designing and developing user interfaces and
-              digital products. I don’t restrict myself to design.
-            </p>
+            <p>My life objectives include but not limited to;</p>
             <ul>
               <li>
-                I specialize in designing and developing user interfaces and
-                digital products. I don’t restrict myself to design.
+                To continuously develop my interpersonal, communications and
+                management skills. To be top-notch in all my dealings.
               </li>
               <li>
-                I specialize in designing and developing user interfaces and
-                digital products. I don’t restrict myself to design.
+                To challenge me to do more problem-solving that will contribute
+                to a greater impact in the organization.
               </li>
               <li>
-                I specialize in designing and developing user interfaces and
-                digital products. I don’t restrict myself to design.
+                To become a world-known product designer, disruption the design
+                space home and abroad.
               </li>
             </ul>
           </div>
           <div className="objectives">
             <h3>Interests</h3>
             <p>
-              I specialize in designing and developing user interfaces and
-              digital products. I don’t restrict myself to design.
+              Yes, I am a full-time product designer. But when I'm not designer,
+              I engage in one the following activity
             </p>
             <ul>
-              <li>Cooking</li>
+              <li>Reading</li>
               <li>Eating</li>
-              <li>Designing</li>
+              <li>Dancing (I’m bad at it, lol)</li>
               <li>Traveling</li>
             </ul>
           </div>

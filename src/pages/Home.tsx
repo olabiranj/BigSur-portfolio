@@ -1,10 +1,6 @@
 import React, { useEffect, useState } from "react";
 import styled from "styled-components";
 import { Switch, Route, Link, useHistory } from "react-router-dom";
-// import fbImg from "../assets/img/fb-img.png";
-// import githubImg from "../assets/img/github.png";
-// import lkImg from "../assets/img/lk-img.png";
-// import twImg from "../assets/img/twitter.png";
 import avatar from "../assets/img/avatar.jpg";
 import avatar2 from "../assets/img/avatar2.jpg";
 import macbook from "../assets/img/macbook.png";
@@ -187,7 +183,7 @@ const Home = () => {
                             <img
                               src={avatar2}
                               alt="big-avatar"
-                              className="big-avatar rounded-circle shadow-lg"
+                              className="big-avatar rounded-circle shadow-lg mt-4"
                             />
                           </div>
                           <div
@@ -196,7 +192,8 @@ const Home = () => {
                           >
                             <h1>What’s Up 😁?</h1>
                             <p className="mt-3">
-                              I am an experienced Software Developer with a
+                              I'm <b className="text-light">Joshua Olabiran</b>,
+                              an experienced Software Developer with a
                               demonstrated history of working in the information
                               technology and services industry. I am skilled in
                               React, Redux, Embedded JavaScript (EJS),

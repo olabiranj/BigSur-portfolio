@@ -3,3 +3,4 @@ interface CustomLinkProps {
   color: string;
   size: string;
 }
+declare module "react-twitter-embed";

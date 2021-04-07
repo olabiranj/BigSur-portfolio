@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import { TwitterTimelineEmbed } from "react-twitter-embed";
 import styled from "styled-components";
 import { Switch, Route, Link, useHistory } from "react-router-dom";
 import avatar from "../assets/img/avatar.jpg";
@@ -107,6 +108,13 @@ const Home = () => {
                   }`}
                 >
                   <Link to="/contact">Contact</Link>
+                </div>
+                <div
+                  className={`${
+                    window.location.pathname === "/contact" && "active"
+                  }`}
+                >
+                  <Link to="/tweets">Tweet</Link>
                 </div>
                 <div>
                   <a
@@ -563,6 +571,15 @@ const Home = () => {
                         </div>
                       </div>
                     </section>
+                  </Route>
+                  <Route to="/tweets">
+                    <div className="col-sm-10 mx-auto mt-3">
+                      <TwitterTimelineEmbed
+                        sourceType="profile"
+                        screenName="Olabiranjoshua"
+                        options={{ height: 900 }}
+                      />
+                    </div>
                   </Route>
                 </Switch>
               </div>
@@ -1123,7 +1140,9 @@ Home.Wrapper = styled.div<largeProps>`
   }
   }
   @media (max-width: 420px) {
-
+    .nav-container{
+      
+    }
   }
 `;
 

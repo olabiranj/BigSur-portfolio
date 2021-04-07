@@ -1,17 +1,35 @@
-@import url("https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap");
 @font-face {
-  font-family: Axiforma;
-  src: url("./assets/fonts/Kastelov - Axiforma Regular.otf") format("truetype");
-  font-weight: bold;
-  font-style: bold;
+  font-family: Helvetica;
+  src: url("./assets/fonts/Helvetica.ttf") format("truetype");
+}
+/* @font-face {
+  font-family: Helvetica;
+  src: url("./assets/fonts/helvetica-light.ttf") format("truetype");
+} */
+@font-face {
+  font-family: Helvetica-Bold;
+  src: url("./assets/fonts/Helvetica-Bold.ttf") format("truetype");
 }
 body {
   margin: 0;
   padding: 0;
-  background-color: #000000;
-  color: #ffffff;
+  background-image: url("/src/assets/img/macos-big-sur-1920x1080-dark-wwdc-2020-22655.jpg");
+  font-family: Helvetica;
+  background-size: cover;
+  color: rgb(255, 255, 255, 0.75);
+  letter-spacing: 0.5px;
 }
-
+a {
+  color: #ffffff;
+  font-size: 0.8rem;
+}
+p {
+  color: #ffffff;
+  font-size: 0.8rem;
+}
+a:hover {
+  color: rgb(255, 255, 255, 0.9);
+}
 .loader-container {
   align-items: center;
   display: flex;
@@ -28,7 +46,28 @@ body {
   flex-direction: column;
   padding: 0 10;
 }
-.spin-loader {
+
+.flex-sb {
+  display: flex;
+  justify-content: space-between;
+}
+.flex-ct {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.btn {
+  background: rgba(285, 100, 25, 0.15);
+  color: rgba(225, 225, 225, 0.75);
+  /* backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px); */
+}
+
+.disabled {
+  cursor: no-drop;
+}
+/* .spin-loader {
   animation-name: spin;
   animation-duration: 2000ms;
   animation-iteration-count: infinite;
@@ -41,4 +80,4 @@ body {
   to {
     transform: rotate(360deg);
   }
-}
+} */

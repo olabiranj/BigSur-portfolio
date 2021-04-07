@@ -1,648 +1,1132 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import styled from "styled-components";
-import Link from "../components/inputs/Links";
-import Navbar from "../components/Nabvar";
-import triImg from "../assets/img/Polygon.png";
-import zagImg from "../assets/img/Vector5.png";
-import bg1Img from "../assets/img/Rectangle72.png";
-import bg2Img from "../assets/img/Rectangle73.png";
-import userImg from "../assets/img/user.png";
-import settingsImg from "../assets/img/settings.png";
-import bookImg from "../assets/img/book.png";
-import adobeXD from "../assets/img/adobe-xd-logo-png-transparent 2.png";
-import adobeIllustr from "../assets/img/586d7feb25738d9f2d793e96 1.png";
-import adobeAE from "../assets/img/Vector.png";
-import figma from "../assets/img/1_nUZs178q_SxL7NbW7mE10A 2.png";
-import slack from "../assets/img/slack.png";
-import zeplin from "../assets/img/zeplin.png";
-import betterInt from "../assets/img/Rectangle 20.png";
-import uiuxImg from "../assets/img/Rectangle 22.png";
-import arrowLeftImg from "../assets/img/arrow-left.png";
-import Footer from "../components/Footer";
-import DisplayCard from "../components/DisplayCard";
-import eduImg from "../assets/img/eduCard.png";
-import r4lImg from "../assets/img/r4l.png";
+import { Switch, Route, Link, useHistory } from "react-router-dom";
+// import fbImg from "../assets/img/fb-img.png";
+// import githubImg from "../assets/img/github.png";
+// import lkImg from "../assets/img/lk-img.png";
+// import twImg from "../assets/img/twitter.png";
+import avatar from "../assets/img/avatar.jpg";
+import avatar2 from "../assets/img/avatar2.jpg";
+import macbook from "../assets/img/macbook.png";
+import reactImg from "../assets/img/react-png.png";
+import reduxImg from "../assets/img/redux.png";
+import gitImg from "../assets/img/git.png";
+import mongodbImg from "../assets/img/mongodb.png";
+import nodeImg from "../assets/img/node.png";
 
+interface largeProps {
+  large: boolean;
+}
 const Home = () => {
-  return (
-    <div className="container">
-      <Home.Wrapper>
-        <Navbar />
-        <section className="header col-md-11 mx-auto">
-          <div className="header-content">
-            <p>Hello, I'm</p>
-            <h1>
-              <span>Juli</span>anna
-            </h1>
-            <h5 className="header-desc col-sm-11">
-              I specialize in designing and developing user interfaces and
-              digital products. I don’t restrict myself to design. The blend of
-              design, user experience, marketing, and business is where I feel I
-              excel.
-            </h5>
-            <div className="links mt-4">
-              <Link>Hire Me</Link>
-              <Link
-                goto={`/contact`}
-                bg="#000000"
-                color="#ffffff"
-                border={true}
-              >
-                Contact Me
-              </Link>
-            </div>
-          </div>
-          <img className="triImg" src={triImg} alt="triangle" />
-          <img className="zagImg" src={zagImg} alt="zigzag" />
-          <div className="icon-links">
-            <div>
-              <a href="https://twitter.com/julee_baby">
-                <i className="fab fa-twitter"></i>
-              </a>
-            </div>
-            <div>
-              <a href="https://www.behance.net/ogunladoluwasa">
-                <i className="fab fa-behance"></i>
-              </a>
-            </div>
-            <div>
-              <a href="https://dribbble.com/Jullly">
-                <i className="fab fa-dribbble"></i>
-              </a>
-            </div>
-            <div>
-              <a href="https://www.linkedin.com/in/ogunladeoluwasayo/">
-                <i className="fab fa-facebook-f"></i>
-              </a>
-            </div>
-          </div>
-        </section>
-        <div className="col-md-10 mx-auto">
-          <section className="what-i-do">
-            <div className="content">
-              <h2>What I do in Nutshell</h2>
-              <p className="col-sm-11">
-                “Perfection is achieved, not when there is nothing more to add,
-                but when there is nothing left to take away.”{" "}
-                <b className="text-white">— Antoine de Saint-Exupery.</b>
-              </p>
-              <div className="row">
-                <div className="col-sm-4">
-                  <div className="icon-container">
-                    <img className="bg-1" src={bg1Img} alt="bg-1" />
-                    <img className="bg-2" src={bg2Img} alt="bg-2" />
-                    <img className="logo-icon" src={userImg} alt="logo-icon" />
-                  </div>
-                  <h3>User Research</h3>
-                  <p>
-                    Through the use of a suitable user research method, I strive
-                    to understand how users go about performing tasks and
-                    achieving goals.
-                  </p>
-                </div>
-                <div className="col-sm-4">
-                  <div className="icon-container">
-                    <img className="bg-1" src={bg1Img} alt="bg-1" />
-                    <img className="bg-2" src={bg2Img} alt="bg-2" />
-                    <img
-                      className="logo-icon"
-                      src={settingsImg}
-                      alt="logo-icon"
-                    />
-                  </div>
-                  <h3>Design Strategy</h3>
-                  <p>
-                    I iteratively seek to redefine problems in an attempt to
-                    identify better alternative strategies and solutions that
-                    might not be instantly apparent.
-                  </p>
-                </div>
-                <div className="col-sm-4">
-                  <div className="icon-container">
-                    <img className="bg-1" src={bg1Img} alt="bg-1" />
-                    <img className="bg-2" src={bg2Img} alt="bg-2" />
-                    <img className="logo-icon" src={bookImg} alt="logo-icon" />
-                  </div>
-                  <h3>Wireframing & Prototyping</h3>
-                  <p>
-                    I iteratively seek to redefine problems in an attempt to
-                    identify better alternative strategies and solutions that
-                    might not be instantly apparent.
-                  </p>
-                </div>
-              </div>
-            </div>
-          </section>
-          <section className="my-works">
-            <h2>My Works</h2>
-            <p className="col-sm-9">
-              "There is no such thing as a boring project. There are only boring
-              executions" <span className="text-white"> ― Irene Etzkorn</span>
-            </p>
+  const [large, setLarge] = useState(false);
+  const [close, setClose] = useState(false);
+  const history = useHistory();
+  const [name, setName] = useState("");
+  const [phonenum, setPhone] = useState("");
+  const [email, setEmail] = useState("");
+  //   const [message, setMessage] = useState("");
+  let none = "#";
 
-            <DisplayCard
-              title="EduSponsor"
-              desc={`EduSponsor is born out of a simple but empathetic idea that every deserving academic candidate irrespective of their social and financial status deserves a shot at their desired conventional exam `}
-              topBtn={[
-                { text: "Mobile", textColor: "#3347FF", bgColor: "#CED3FF" },
-              ]}
-              button={{
-                text: "Case Study",
-                textColor: "#ffffff",
-                bgColor: "#F04770",
-                link: "/work-details",
-              }}
-              imgRight={eduImg}
-            />
-            <DisplayCard
-              title="Rent4Less"
-              desc={`Rent4Less is a rental scheme designed to provide a flexible way to rent homes. With this scheme, you can now spread out the payment for apartments in choice locations, by  on a monthly basis.`}
-              topBtn={[
-                { text: "Mobile", textColor: "#FF6B6B", bgColor: "#FFF1FB" },
-              ]}
-              button={{
-                text: "Case Study",
-                textColor: "#ffffff",
-                bgColor: "#03B66B",
-                link: "/work-details",
-              }}
-              imgRight={r4lImg}
-            />
-            <div className="see-all">
-              <Link bg="#000000" border color="#ffffff" goto={`/works`}>
-                See All
-              </Link>
-            </div>
-          </section>
-          <section className="tools">
-            <div className="container-fluid">
-              <div className="row">
-                <div className="col-md-6">
-                  <h2 className=" mb-4">
-                    “You can’t wait for inspiration, you have to go after it
-                    with a club.”
-                  </h2>
-                  <p className="">
-                    If a design is a mindset, a design tool is the hand of the
-                    mind. Here are the tools I take pleasure in working with;
-                  </p>
-                </div>
-                <div className="col-md-6">
-                  <div className="tools-container">
-                    <p>
-                      <img className="link-icon" src={adobeXD} alt="adobe" />
-                      Adobe XD
-                    </p>
-                    <p>
-                      <img
-                        className="link-icon"
-                        src={adobeIllustr}
-                        alt="adobe"
-                      />
-                      Adobe Illustrator
-                    </p>
-                    <p>
-                      <img className="link-icon" src={adobeAE} alt="adobe" />
-                      Adobe After-Effect
-                    </p>
-                    <p>
-                      <img className="link-icon" src={figma} alt="adobe" />
-                      Figma
-                    </p>
-                    <p>
-                      <img className="link-icon" src={slack} alt="adobe" />
-                      Slack
-                    </p>
-                    <p>
-                      <img className="link-icon" src={zeplin} alt="adobe" />
-                      Zeplin
-                    </p>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </section>
-          <section className="publications">
-            <h2>My Publications</h2>
-            <p className="col-md-7 mb-4">
-              Through writing, I come to understand my internal psychologies
-              more intimately than through any other form of semantic
-              exploration.
-            </p>
-            <div className="row">
-              <div className="col-md-6 px-4">
-                <div className="content">
-                  <img src={betterInt} alt="better interface" />
-                  <div className="text">
-                    <h3>Designing Better Interface</h3>
-                    <p>
-                      Design is the process of creating machines, interactive
-                      systems, buildings, vehicles, software, objects, etc. It
-                      user-centered, i.e. users are at the heart of the design.
-                      It is about creating solutions for people, physical items,
-                      or abstract systems to address a need or a problem. Simply
-                      put, Design is a science of creating things: from
-                      inception to delivery.
-                    </p>
-                  </div>
-                  <div className="circle-btn">
-                    <img src={arrowLeftImg} alt="left" />
-                  </div>
-                </div>
-              </div>
-              <div className="col-md-6 px-4">
-                <div className="content">
-                  <img src={uiuxImg} alt="better interface" />
-                  <div className="text">
-                    <h3>UI, UX: What’s the difference?</h3>
-                    <p>
-                      The line between UX and UI is a pretty thin one; it is
-                      indeed so thin that it is arguably one of the most
-                      discussed issues in recent times. Although there is a
-                      plethora of information on the internet seeking to shed
-                      more light on the UX and UI and corresponding job
-                      descriptions and requirements of these fields, the
-                      boundary between UI and
-                    </p>
-                  </div>
-                  <div className="circle-btn">
-                    <img src={arrowLeftImg} alt="left" />
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div className="see-all">
-              <Link bg="#000000" border color="#ffffff">
-                See All
-              </Link>
-            </div>
-          </section>
+  useEffect(() => {}, []);
+  return (
+    <Home.Wrapper large={large}>
+      <div className="flex-ct template-container">
+        <div className="notification-bar flex-sb">
+          <div className="info-details">
+            <ul>
+              <li>
+                <a href="/">
+                  <span className="fab fa-apple"></span>
+                </a>
+              </li>
+              <li>
+                <a href="/">Joshua Olabiran</a>
+              </li>
+              <li>
+                <a href={none}>File</a>
+              </li>
+              <li>
+                <a href={none}>Edit</a>
+              </li>
+              <li>
+                <a href={none}>View</a>
+              </li>
+              <li>
+                <a href={none}>Go</a>
+              </li>
+            </ul>
+          </div>
+          <div className="info-details">
+            <ul>
+              <li>
+                <span className="fa fa-user-circle"></span>
+              </li>
+              <li>
+                <span className="fa fa-volume-mute"></span>
+              </li>
+              <li>
+                <span className="fa fa-wifi"></span>
+              </li>
+              <li>{`${new Date().getHours()}:${new Date().getMinutes()}`}</li>
+            </ul>
+          </div>
         </div>
-        <Footer />
-      </Home.Wrapper>
-    </div>
+        <div
+          className={`body-content ${!large && "container"} ${
+            close && "d-none"
+          }`}
+        >
+          <div className="col-xl-12 mx-auto shadow-lg">
+            <div className="row nav-container ">
+              <div className="col-3 col-3-none d-flex">
+                <div
+                  className="circle red"
+                  onClick={() => setClose(true)}
+                ></div>
+                <div
+                  className="circle yellow"
+                  onClick={() => setLarge(!large)}
+                ></div>
+                <div
+                  className="circle green"
+                  onClick={() => setLarge(!large)}
+                ></div>
+              </div>
+              <div className="col d-flex center-nav">
+                <div
+                  className={`${window.location.pathname === "/" && "active"}`}
+                >
+                  <Link to="/">Home</Link>
+                </div>
+                <div
+                  className={`${
+                    window.location.pathname === "/work" && "active"
+                  }`}
+                >
+                  <Link to="/work">My Works</Link>
+                </div>
+                <div
+                  className={`${
+                    window.location.pathname === "/contact" && "active"
+                  }`}
+                >
+                  <Link to="/contact">Contact</Link>
+                </div>
+                <div>
+                  <a
+                    target="_blank"
+                    rel="noreferrer"
+                    href="https://drive.google.com/file/d/1jekuDHov_-S9q1jvslJMhnB9-JyD_Y34/view?usp=sharing"
+                  >
+                    Resume
+                  </a>
+                </div>
+              </div>
+              <div className="col-3 col-3-img">
+                <a href="https://twitter.com/Olabiranjoshua">
+                  <span className="fab fa-twitter mr-3"></span>
+                </a>
+                <a href="https://github.com/olabiranj">
+                  <span className="fab fa-github mr-3"></span>
+                </a>
+                <a href="https://www.linkedin.com/in/joshua-olabiran-6625a3177/">
+                  <span className="fab fa-linkedin-in mr-3"></span>
+                </a>
+                <img src={avatar} alt="avatar" />
+              </div>
+            </div>
+            <div className="row bottom-content">
+              <div className="col-lg-3 pt-3">
+                <div className="side-link-container">
+                  <p>Technologies</p>
+                  <div className="p-1 px-2 rounded mb-1 active">
+                    <p>React</p>
+                  </div>
+                  <div className="p-1 px-2 rounded mb-1 ">
+                    <p>Redux</p>
+                  </div>
+                  <div className="p-1 px-2 rounded mb-1 ">
+                    <p>Git</p>
+                  </div>
+                  <div className="p-1 px-2 rounded mb-1 ">
+                    <p>NPM</p>
+                  </div>
+                  <div className="p-1 px-2 rounded mb-1 ">
+                    <p>Node.js</p>
+                  </div>
+                  <div className="p-1 px-2 rounded mb-1 ">
+                    <p>Express</p>
+                  </div>
+                  <div className="p-1 px-2 rounded mb-1 ">
+                    <p>ESlint</p>
+                  </div>
+                  <div className="p-1 px-2 rounded mb-1 ">
+                    <p>Prettier</p>
+                  </div>
+                </div>
+                <div className="side-link-container">
+                  <p>Hobbies</p>
+                  <div className="p-1 px-2 rounded mb-1 active shadow">
+                    <p>Driving</p>
+                  </div>
+                  <div className="p-1 px-2 rounded mb-1 ">
+                    <p>Travelling</p>
+                  </div>
+                  <div className="p-1 px-2 rounded mb-1 ">
+                    <p>Tennis</p>
+                  </div>
+                </div>
+              </div>
+              <div className="col-lg-9">
+                <Switch>
+                  <Route path="/" exact>
+                    <div className="col-md-10 mx-auto">
+                      <div className="flex-ct mx-3">
+                        <div className="row">
+                          <div className="col-md-5 pt-5" data-aos="fade-down">
+                            <img
+                              src={avatar2}
+                              alt="big-avatar"
+                              className="big-avatar rounded-circle shadow-lg"
+                            />
+                          </div>
+                          <div
+                            className="col-md-7 pt-5 about"
+                            data-aos="fade-up"
+                          >
+                            <h1>What’s Up 😁?</h1>
+                            <p className="mt-3">
+                              I am an experienced Software Developer with a
+                              demonstrated history of working in the information
+                              technology and services industry. I am skilled in
+                              React, Redux, Embedded JavaScript (EJS),
+                              express.js and MongoDB. I convert UI designs made
+                              from Figma, Adobe XD, Zeplin, etc into real world
+                              applications. I am a strong engineering
+                              professional with a Bachelor of Science(Education)
+                              - focused in Computer Science from Lagos State
+                              University.
+                            </p>
+                            <a
+                              className="btn shadow"
+                              href="https://wa.me/2348093481350"
+                            >
+                              Hire Me
+                            </a>
+                          </div>
+                        </div>
+                      </div>
+                      <br />
+                      <br />
+                      <h4 className="mt-4 ml-3 mb-4">Projects</h4>
+                      <h3 className="col-md-8 mx-auto project-text">
+                        <b>
+                          "There is no such thing as a boring project. There are
+                          only boring executions "
+                        </b>
+                        <br />
+                        ―Irene Etzkorn
+                      </h3>
+                      <div className="projects mx-4 mb-3">
+                        <div className="row single-project ">
+                          <div className="col-md-5 col-lg-5  p-3 py-4">
+                            <div className="flex-ct">
+                              <img src={macbook} alt="edu" />
+                            </div>
+                          </div>
+                          <div className="col-md-7 p-3">
+                            <div className="">
+                              <h1>R'ch Me</h1>
+                              <p>
+                                Lorem ipsum dolor sit amet consectetur,
+                                adipisicing elit. Architecto inventore porro
+                                blanditiis in! Voluptatibus minus, est maxime
+                                vel eos modi nemo illum ad deleniti beatae
+                                nostrum quas. Consequatur, amet voluptate.
+                              </p>
+                              <button
+                                onClick={() =>
+                                  window.open("https://www.rchme.co/", "_blank")
+                                }
+                                className="btn shadow"
+                              >
+                                Launch
+                              </button>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div className="projects mx-4 mb-3">
+                        <div className="row single-project">
+                          <div className="col-md-5 p-3 py-4">
+                            <div className="flex-ct">
+                              <img src={macbook} alt="edu" />
+                            </div>
+                          </div>
+                          <div className="col-md-7 p-3">
+                            <div className="">
+                              <h1>TM Academy</h1>
+                              <p>
+                                Lorem ipsum dolor sit amet consectetur,
+                                adipisicing elit. Architecto inventore porro
+                                blanditiis in! Voluptatibus minus, est maxime
+                                vel eos modi nemo illum ad deleniti beatae
+                                nostrum quas. Consequatur, amet voluptate.
+                              </p>
+                              <button
+                                onClick={() =>
+                                  window.open(
+                                    "https://tmacademy.tm30.net/",
+                                    "_blank"
+                                  )
+                                }
+                                className="btn shadow"
+                              >
+                                Launch
+                              </button>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div className="projects mx-4">
+                        <div className="row single-project">
+                          <div className="col-md-5 p-3 py-4">
+                            <div className="flex-ct">
+                              <img src={macbook} alt="edu" />
+                            </div>
+                          </div>
+                          <div className="col-md-7 p-3">
+                            <div className="">
+                              <h1>EduSponsor</h1>
+                              <p>
+                                Lorem ipsum dolor sit amet consectetur,
+                                adipisicing elit. Architecto inventore porro
+                                blanditiis in! Voluptatibus minus, est maxime
+                                vel eos modi nemo illum ad deleniti beatae
+                                nostrum quas. Consequatur, amet voluptate.
+                              </p>
+                              <button
+                                onClick={() =>
+                                  window.open(
+                                    "https://myedusponsor.com/",
+                                    "_blank"
+                                  )
+                                }
+                                className="btn shadow"
+                              >
+                                Launch
+                              </button>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div className="col-sm-5 mx-auto">
+                        <button
+                          onClick={() => history.push("/work")}
+                          className="btn shadow btn-block"
+                        >
+                          View All Projects
+                        </button>
+                      </div>
+                      <br />
+                      <br />
+                      <h4 className="mt-4 ml-3">Tools and Technologies</h4>
+                      <div className="flex-ct my-4 py-4 tools">
+                        <img
+                          className="m-4"
+                          src={reactImg}
+                          alt="react"
+                          height={100}
+                        />
+                        <img
+                          className="m-4"
+                          src={reduxImg}
+                          alt="redux"
+                          height={100}
+                        />
+                        <img
+                          className="m-4"
+                          src={nodeImg}
+                          alt="react"
+                          height={100}
+                        />
+                        <img
+                          className="m-4"
+                          src={gitImg}
+                          alt="react"
+                          height={100}
+                        />
+                        <img
+                          className="m-4"
+                          src={mongodbImg}
+                          alt="redux"
+                          height={100}
+                        />
+                      </div>
+                    </div>
+                  </Route>
+                  <Route path="/work" exact>
+                    <div className="col-md-10 mx-auto">
+                      <h4 className="mt-4 ml-3">Projects</h4>
+                      <div className="projects mx-4 mb-3">
+                        <div className="row single-project ">
+                          <div className="col-md-12 col-lg-5 p-3 py-4">
+                            <div className="flex-ct">
+                              <img src={macbook} alt="edu" />
+                            </div>
+                          </div>
+                          <div className="col-md-7 p-3">
+                            <div className="">
+                              <h1>R'ch Me</h1>
+                              <p>
+                                Lorem ipsum dolor sit amet consectetur,
+                                adipisicing elit. Architecto inventore porro
+                                blanditiis in! Voluptatibus minus, est maxime
+                                vel eos modi nemo illum ad deleniti beatae
+                                nostrum quas. Consequatur, amet voluptate.
+                              </p>
+                              <button
+                                onClick={() =>
+                                  window.open("https://www.rchme.co/", "_blank")
+                                }
+                                className="btn shadow"
+                              >
+                                Launch
+                              </button>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div className="projects mx-4 mb-3">
+                        <div className="row single-project">
+                          <div className="col-md-5 p-3 py-4">
+                            <div className="flex-ct">
+                              <img src={macbook} alt="edu" />
+                            </div>
+                          </div>
+                          <div className="col-md-7 p-3">
+                            <div className="">
+                              <h1>TM Academy</h1>
+                              <p>
+                                Lorem ipsum dolor sit amet consectetur,
+                                adipisicing elit. Architecto inventore porro
+                                blanditiis in! Voluptatibus minus, est maxime
+                                vel eos modi nemo illum ad deleniti beatae
+                                nostrum quas. Consequatur, amet voluptate.
+                              </p>
+                              <button
+                                onClick={() =>
+                                  window.open(
+                                    "https://tmacademy.tm30.net/",
+                                    "_blank"
+                                  )
+                                }
+                                className="btn shadow"
+                              >
+                                Launch
+                              </button>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div className="projects mx-4 mb-3">
+                        <div className="row single-project">
+                          <div className="col-md-5 p-3 py-4">
+                            <div className="flex-ct">
+                              <img src={macbook} alt="edu" />
+                            </div>
+                          </div>
+                          <div className="col-md-7 p-3">
+                            <div className="">
+                              <h1>Awa Cloud</h1>
+                              <p>
+                                Lorem ipsum dolor sit amet consectetur,
+                                adipisicing elit. Architecto inventore porro
+                                blanditiis in! Voluptatibus minus, est maxime
+                                vel eos modi nemo illum ad deleniti beatae
+                                nostrum quas. Consequatur, amet voluptate.
+                              </p>
+                              <button
+                                onClick={() =>
+                                  window.open(
+                                    "https://awa-cloud.netlify.app/",
+                                    "_blank"
+                                  )
+                                }
+                                className="btn shadow"
+                              >
+                                Launch
+                              </button>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div className="projects  mx-4">
+                        <div className="row single-project">
+                          <div className="col-md-5 p-3 py-4">
+                            <div className="flex-ct">
+                              <img src={macbook} alt="edu" />
+                            </div>
+                          </div>
+                          <div className="col-md-7 p-3">
+                            <div className="">
+                              <h1>EduSponsor</h1>
+                              <p>
+                                Lorem ipsum dolor sit amet consectetur,
+                                adipisicing elit. Architecto inventore porro
+                                blanditiis in! Voluptatibus minus, est maxime
+                                vel eos modi nemo illum ad deleniti beatae
+                                nostrum quas. Consequatur, amet voluptate.
+                              </p>
+                              <button
+                                onClick={() =>
+                                  window.open(
+                                    "https://myedusponsor.com/",
+                                    "_blank"
+                                  )
+                                }
+                                className="btn shadow"
+                              >
+                                Launch
+                              </button>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+
+                      <br />
+                    </div>
+                  </Route>
+                  <Route path="/contact" exact>
+                    <section className="contact col-sm-10 mx-auto">
+                      <div className="row">
+                        <div className="col-md-6 mb-4">
+                          <h2>Get a Quote</h2>
+                          <p>
+                            I am always open to full-time & freelance
+                            opportunities. Please send me a message if you have
+                            any inquiries and I will respond to you ask soon as
+                            possible.
+                          </p>
+                          <div>
+                            <a href="mailto:olabiranj@gmail.com">
+                              <span className="fa fa-envelope"></span>
+                              olabiranj@gmail.com
+                            </a>
+                          </div>
+                          <br />
+                          <div>
+                            <a href="tel:+234 803 979 3005">
+                              <span className="fa fa-phone"></span>
+                              +234 809 348 1350
+                            </a>
+                          </div>
+                        </div>
+                        <div className="col-md-6">
+                          <form
+                            action="mailto:olabiranj@gmail.com"
+                            method="POST"
+                            encType="multipart/form-data"
+                            name="Email Form"
+                          >
+                            <input
+                              className="text-input"
+                              placeholder="Your Full Name"
+                              type="text"
+                              required
+                              value={name}
+                              onChange={(e) => setName(e.target.value)}
+                            />
+                            <input
+                              className="text-input"
+                              placeholder="Your Phone Number"
+                              required
+                              type="tel"
+                              value={phonenum}
+                              onChange={(e) => setPhone(e.target.value)}
+                            />
+                            <input
+                              className="text-input"
+                              required
+                              placeholder="Your Email"
+                              type="email"
+                              value={email}
+                              onChange={(e) => setEmail(e.target.value)}
+                            />
+                            <textarea
+                              required
+                              name=""
+                              placeholder="Your Message"
+                            ></textarea>
+                            <button className="btn shadow" type="submit">
+                              Submit
+                            </button>
+                            {/* <Link>Send a Message</Link> */}
+                          </form>
+                        </div>
+                      </div>
+                    </section>
+                  </Route>
+                </Switch>
+              </div>
+            </div>
+          </div>
+        </div>
+        {/* <div className="footer flex-ct">
+          <div className="footer-content flex-sb px-3 py-2">
+            <img src={fbImg} alt="facebook" className="m-auto" />
+            <img src={githubImg} alt="github" className="m-auto" />
+            <img src={lkImg} alt="linkedIn" className="m-auto" />
+            <img src={twImg} alt="twitter" className="m-auto" />
+          </div>
+        </div> */}
+      </div>
+    </Home.Wrapper>
   );
 };
 
-Home.Wrapper = styled.div`
-  .header {
-    min-height: 90vh;
-    width: 100%;
+Home.Wrapper = styled.div<largeProps>`
+  .template-container {
+    min-height: 100vh;
     display: flex;
     justify-content: center;
-    align-items: center;
-    .header-content {
-      height: fit-content;
-      width: 90%;
-      margin-top: 50px;
-      p {
-        font-family: Axiforma;
-        font-style: normal;
-        font-weight: 600;
-        font-size: 20px;
-        line-height: 33px;
-        /* identical to box height */
-
-        /* linear gradient */
-        text-align: left;
-        background: linear-gradient(
-          90deg,
-          #ff6b6b 0%,
-          #faab32 53.94%,
-          #ff6b6b 100%
-        );
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
-      }
-      > h1 {
-        font-family: Space Grotesk;
-        font-style: normal;
-        font-weight: bold;
-        font-size: 130px;
-        padding: 0;
-        span {
-          color: #000000;
-          background: #ffffff;
-          padding: 0 25px;
-          border-radius: 10px;
-          margin-right: 5px;
-        }
-      }
-      .header-desc {
-        margin-top: 50px;
-        font-family: Axiforma;
-        font-style: normal;
-        font-weight: normal;
-        font-size: 18px;
-        line-height: 40px;
-        /* or 222% */
-        margin-left: -10px;
-        color: #bcbcbc;
-      }
-      .links {
-        display: flex;
-        flex-wrap: wrap;
-      }
-    }
-    .zagImg {
-      position: absolute;
-      left: -110px;
-      top: 300px;
-      z-index: -1;
-    }
-    .triImg {
-      position: absolute;
-      right: -60px;
-      top: 150px;
-      z-index: -1;
-    }
-    .icon-links {
-      position: absolute;
-      bottom: 90px;
-      right: -60px;
-      dispaly: flex;
-      flex-direction: column;
-      height: fit-content;
-      div {
-        height: 36px;
-        width: 36px;
-        border-radius: 50%;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        background: #ffffff;
-        margin-bottom: 10px;
-        a {
-          text-decoration: none;
-          color: #000000;
-        }
-      }
-    }
-  }
-  .what-i-do {
-    min-height: 100vh;
-    width: 100%;
-    display: flex;
-    align-items: center;
-    .content {
-      h2 {
-        font-family: Space Grotesk;
-        font-style: normal;
-        font-weight: bold;
-        font-size: 35px;
-        line-height: 65px;
-        /* identical to box height, or 186% */
-
-        color: #ffffff;
-      }
-      p {
-        font-family: Axiforma;
-        font-style: normal;
-        font-weight: normal;
-        font-size: 18px;
-        line-height: 40px;
-        /* or 222% */
-
-        color: #bcbcbc;
-        margin-left: -15px;
-        margin-bottom: 60px;
-      }
-      .row {
-        .col-sm-4 {
-          .icon-container {
-            position: relative;
-            margin-left: -10px;
-            .bg-2 {
-              position: absolute;
-              bottom: 10px;
-              left: 10px;
-            }
-            .logo-icon {
-              position: absolute;
-              bottom: 23px;
-              left: 25px;
+    flex-direction: column;
+    .notification-bar {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      background: rgba(0, 0, 0, 0.15);
+      backdrop-filter: blur(4px);
+      -webkit-backdrop-filter: blur(4px);
+      .info-details {
+        ul {
+          list-style-type: none;
+          padding-inline-start: 0;
+          padding 2px 0;
+          margin: 0;
+          li {
+            margin-right: 10px;
+            margin-left: 10px;
+            display: inline;
+            font-size: 0.8rem;
+            a {
+              text-decoration: none;
             }
           }
-          h3 {
-            font-family: Space Grotesk;
-            font-style: normal;
-            font-weight: bold;
-            font-size: 18px;
-            line-height: 23px;
-          }
-          p {
-            font-family: Axiforma;
-            font-style: normal;
-            font-weight: normal;
-            font-size: 13px;
-            line-height: 27px;
-            /* or 208% */
-            margin-left: 0;
-            color: #bcbcbc;
-          }
         }
       }
     }
-  }
-  .my-works {
-    h2 {
-      font-family: Space Grotesk;
-      font-style: normal;
-      font-weight: bold;
-      font-size: 35px;
-      line-height: 65px;
-      /* identical to box height, or 186% */
-
-      color: #ffffff;
-    }
-    p {
-      font-family: Axiforma;
-      font-style: normal;
-      font-weight: normal;
-      font-size: 18px;
-      line-height: 40px;
-      /* or 222% */
-
-      color: #bcbcbc;
-      margin-left: -15px;
-      margin-bottom: 60px;
-    }
-    .see-all {
-      display: flex;
-      justify-content: center;
-      margin-top: 100px;
-      margin-bottom: 100px;
-    }
-  }
-  .tools {
-    margin-bottom: 100px;
-    .container-fluid {
-      .row {
-        .col-md-6 {
-          h2 {
-            font-family: Space Grotesk;
-            font-style: normal;
-            font-weight: bold;
-            font-size: 35px;
-            line-height: 65px;
-            /* or 186% */
-
-            color: #ffffff;
+    .body-content {
+      .col-xl-12{
+        ${(props) =>
+          props.large &&
+          `position: fixed;
+        top: 28px;
+        left: 0;`}
+        box-shadow: 0 1rem 3rem rgba(0,0,0,.55)!important;
+        border-radius: 10px;
+        background: rgba(0, 0, 0, 0.35);
+        backdrop-filter: blur(18px);
+        -webkit-backdrop-filter: blur(18px);
+        >.nav-container{
+          border-bottom: rgba(225, 225, 225, 0.25) solid 0.7px;
+          .col-3{
+            div{
+              margin-top: 15px;
+              height: 12px;
+              width: 12px;
+              border-radius: 50%;
+              margin-right: 5px;
+              cursor: pointer;
+            }
+            .yellow{
+              background: yellow;
+            }
+            .red{
+              background: red;
+            }
+            .green{
+              background: green;
+            }
           }
-          p {
-            font-family: Axiforma;
-            font-style: normal;
-            font-weight: normal;
-            font-size: 18px;
-            line-height: 40px;
-            /* or 222% */
-
-            color: #bcbcbc;
-          }
-          .tools-container {
+          .col-3-img{
             display: flex;
-            flex-wrap: wrap;
-            div {
-              border-radius: 40px;
-              border: 1px solid #ffffff;
-              display: flex;
-              justify-content: center;
-              align-items: center;
+            justify-content: center;
+            align-items: center;
+            img{
+              width: 30px;
+              height: 30px;
+              margin-right: 5px;
+              border-radius: 50%;
             }
-            p {
-              padding: 8px 25px;
-              border-radius: 40px;
-              border: 1px solid #ffffff;
-              margin-right: 15px;
-              margin-bottom: 25px;
-              font-family: Axiforma;
-              font-style: normal;
-              font-weight: normal;
-              font-size: 15px;
-              color: #ffffff;
-              background: #090909;
+          }
+          .col{
+            padding-left: 0 !important;
+            div{
+              width: 100px;
+              padding-top: 15px;
+              padding-bottom: 15px;
+              a {
+                text-decoration: none;
+                display: block;
+                font-size: 0.8rem;
+                text-align: center!important;
+                color: rgb(255, 255, 255, 0.25);
+              }
             }
-            .link-icon {
-              margin-right: 10px;
+            .active{
+              border-bottom: rgba(225, 225, 225, 0.85) solid 2px;
+              a{
+                color: rgb(255, 255, 255, 0.75);
+              }
             }
+          }
+        }
+        .bottom-content{
+          h1{
+            font-family: 'Space Grotesk', sans-serif;
+                font-weight: bold;
+          }
+          p{
+            color:  rgba(225, 225, 225, 0.6);
+          }
+          .col-lg-3{
+            ${(props) => (props.large ? `height: 95vh;` : "height: 70vh;")}
+            overflow-y: auto;
+            ::-webkit-scrollbar-track {
+              -webkit-box-shadow: inset 0 0 6px rgba(225, 225, 225, 0.3);
+              background-color: inherit;
+            }
+
+            ::-webkit-scrollbar {
+              width: 6px;
+              background-color: inherit;
+            }
+
+            ::-webkit-scrollbar-thumb {
+              background-color:  rgba(225, 225, 225, 0.3);
+              border-radius: 10px;
+            }
+            .side-link-container{
+              p{
+                color: rgb(255, 255, 255, 0.25);
+                font-size: 0.8rem;
+                margin-bottom: 4px;
+              }
+              >div{
+                p{
+                  color: #ffffff;
+                }
+                :hover{
+                  background: rgba(0, 0, 0, 0.35);
+                }
+              }
+              .active{
+                background: rgba(0, 0, 0, 0.35);
+              }
+            }
+          }
+          .col-lg-9{
+            border-bottom-right-radius: 10px;
+            &.flex-ct{
+              height: 54vh;
+            }
+            background: rgba(0, 0, 0, 0.35);
+            height: 60vh;
+             ${(props) => (props.large ? `height: 95vh;` : "height: 70vh;")}
+            overflow-y: auto;
+            ::-webkit-scrollbar-track {
+              -webkit-box-shadow: inset 0 0 6px rgba(225, 225, 225, 0.3);
+              background-color: inherit;
+            }
+
+            ::-webkit-scrollbar {
+              width: 6px;
+              background-color: inherit;
+            }
+
+            ::-webkit-scrollbar-thumb {
+              background-color:  rgba(225, 225, 225, 0.3);
+              border-radius: 10px;
+            }
+          }
+          .big-avatar{
+            width: 100%;
+          }
+          .about{
+            h1{
+            }
+            p{
+              color:  rgba(225, 225, 225, 0.6);
+              font-size: 18px;
+              font-family: 'Mulish', sans-serif;
+            }
+          }
+          .project-text{
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: 36px;
+          }
+          .projects{  
+            margin-top: 70px;
+            margin-bottom: 70px;
+            img{
+              margin-top: 30px;
+              width: 70%;
+            }
+            .single-project{
+              background-color:  rgba(225, 225, 225, 0.05);
+              border-radius: 10px;
+              p{
+                font-family: 'Mulish', sans-serif;
+                font-size: 16px;
+              }
+            }
+          }
+          .tool{
+
+          }
+        }
+      }
+    }
+    .footer{
+      height: 70px;
+      .footer-content{
+        background: rgba(225, 225, 225, 0.25);
+        backdrop-filter: blur(4px);
+        border-radius: 15px;
+        -webkit-backdrop-filter: blur(4px);
+        padding-left: -15px !important;
+        img{
+          border-radius: 10px;
+          height: 50px;
+          width: 50px;
+          transition: all .2s;
+          margin-right:5px !important;
+          margin-left:5px !important;
+          :hover{
+            transform: scale(1.3);
           }
         }
       }
     }
   }
-  .publications {
-    h2 {
-      font-family: Space Grotesk;
-      font-style: normal;
-      font-weight: bold;
-      font-size: 35px;
-      line-height: 65px;
-      margin-left: 10px;
-    }
-    p {
-      font-family: Axiforma;
-      font-style: normal;
-      font-weight: normal;
-      font-size: 18px;
-      line-height: 40px;
-      /* or 222% */
-      color: #bcbcbc;
-    }
+  .contact {
+    margin-top: 100px;
     .row {
-      margin-top: 40px;
       .col-md-6 {
-        margin-bottom: 20px;
-        .content {
-          position: relative;
-          background: rgba(9, 9, 9, 0.87);
-          border: 1px solid rgba(63, 63, 63, 0.78);
-          box-sizing: border-box;
-          border-radius: 10px;
-          img {
+        h2 {
+          font-family: Space Grotesk;
+          font-style: normal;
+          font-weight: bold;
+          font-size: 50px;
+          line-height: 64px;
+          /* identical to box height */
+
+          color: #ffffff;
+          margin-bottom: 50px;
+        }
+        p {
+          font-style: normal;
+          font-weight: normal;
+          font-size: 15px;
+          font-family: 'Mulish', sans-serif;
+          line-height: 30px;
+          /* or 200% */
+
+          color: rgba(255, 255, 255, 0.71);
+        }
+        div {
+          margin-top: 30px;
+          a {
+            font-style: normal;
+            font-weight: normal;
+            font-size: 15px;
+            font-family: 'Mulish', sans-serif;
+            line-height: 24px;
+            /* identical to box height */
+
+            color: rgba(255, 255, 255, 0.71);
+
+            span {
+              margin-right: 15px;
+            }
+          }
+        }
+        form {
+          margin-top: 20px;
+          .text-input {
+            margin-bottom: 20px;
+            background: rgba(9, 9, 9, 0.27);
+            border: 1px solid rgba(63, 63, 63, 0.78);
+            box-sizing: border-box;
+            border-radius: 15px;
+            padding: 14px;
+            padding-left: 27px;
             width: 100%;
+            font-style: normal;
+            font-weight: 300;
+            font-size: 13px;
+            line-height: 30px;
+            /* identical to box height, or 231% */
+            outline: none;
+            color: rgba(255, 255, 255, 0.6);
+            :focus{
+            background: rgba(9, 9, 9, 0.27);
+            }
+          }
+          textarea {
+            width: 100%;
+            height: 150px;
+            margin-bottom: 20px;
+            background: rgba(9, 9, 9, 0.27);
+            border: 1px solid rgba(63, 63, 63, 0.78);
+            box-sizing: border-box;
+            border-radius: 15px;
+            padding: 14px;
+            padding-left: 27px;
+            width: 100%;
+            font-style: normal;
+            font-weight: 300;
+            font-size: 13px;
+            line-height: 30px;
+            /* identical to box height, or 231% */
+            outline: none;
+            color: rgba(255, 255, 255, 0.6);
             margin-bottom: 30px;
           }
-          .text {
-            padding-left: 20px;
-            padding-right: 20px;
-            margin-bottom: 70px;
-            h3 {
-              font-family: Space Grotesk;
-              font-style: normal;
-              font-weight: bold;
-              font-size: 25px;
-              line-height: 30px;
-            }
-            p {
-              font-family: Axiforma;
-              font-style: normal;
-              font-weight: normal;
-              font-size: 14px;
-              line-height: 30px;
-              /* or 214% */
-
-              color: #bcbcbc;
-            }
-          }
-          .circle-btn {
-            height: 60px;
-            width: 60px;
-            border-radius: 50%;
-            background: #ff6b6b;
-            box-shadow: 0px 4px 12px #690303;
-            position: absolute;
-            right: -25px;
-            bottom: 7px;
-            img {
-              width: 20px;
-              height: 20px;
-              margin-top: 20px;
-              margin-left: 20px;
-            }
-          }
         }
       }
-    }
-    .see-all {
-      display: flex;
-      justify-content: center;
-      margin-top: 100px;
-      margin-bottom: 100px;
     }
   }
-
-  @media (max-width: 768px) {
-    .header {
-      .header-content {
-        h1 {
-          font-size: 70px;
-        }
-        .header-desc {
-          font-size: 14px;
+  @media (max-width: 988px) {
+    .template-container {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    .notification-bar {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      background: rgba(0, 0, 0, 0.15);
+      backdrop-filter: blur(4px);
+      -webkit-backdrop-filter: blur(4px);
+      .info-details {
+        ul {
+          list-style-type: none;
+          padding-inline-start: 0;
+          padding 2px 0;
+          margin: 0;
+          li {
+            margin-right: 10px;
+            margin-left: 10px;
+            display: inline;
+            font-size: 0.8rem;
+            a {
+              text-decoration: none;
+            }
+          }
         }
       }
     }
+    .body-content {
+      .col-xl-12{
+        position: fixed;
+        top: 28px;
+        left: 0;
+        box-shadow: 0 1rem 3rem rgba(0,0,0,.55)!important;
+        border-radius: 0px;
+        background: rgba(0, 0, 0, 0.35);
+        backdrop-filter: blur(18px);
+        -webkit-backdrop-filter: blur(18px);
+        >.nav-container{
+          border-bottom: rgba(225, 225, 225, 0.25) solid 0.7px;
+          justify-content: space-between;
+          .col-3-none{
+            display: none !important;
+          }
+          .col-3{
+            div{
+              margin-top: 15px;
+              height: 12px;
+              width: 12px;
+              border-radius: 50%;
+              margin-right: 5px;
+              cursor: pointer;
+            }
+            .yellow{
+              background: yellow;
+            }
+            .red{
+              background: red;
+            }
+            .green{
+              background: green;
+            }
+          }
+          .col-3-img{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            img{
+              width: 30px;
+              height: 30px;
+              margin-right: 5px;
+              border-radius: 50%;
+            }
+          }
+          .col{
+            padding-left: 0 !important;
+            div{
+              width: 100px;
+              padding-top: 15px;
+              padding-bottom: 15px;
+              a {
+                text-decoration: none;
+                display: block;
+                font-size: 0.8rem;
+                text-align: center!important;
+                color: rgb(255, 255, 255, 0.25);
+              }
+            }
+            .active{
+              border-bottom: rgba(225, 225, 225, 0.85) solid 2px;
+              a{
+                color: rgb(255, 255, 255, 0.75);
+              }
+            }
+          }
+        }
+        .bottom-content{
+          h1{
+            font-family: 'Space Grotesk', sans-serif;
+                font-weight: bold;
+          }
+          p{
+            color:  rgba(225, 225, 225, 0.6);
+          }
+          .col-lg-3{
+            display: none;
+            height: 95vh;
+            overflow-y: auto;
+            ::-webkit-scrollbar-track {
+              -webkit-box-shadow: inset 0 0 6px rgba(225, 225, 225, 0.3);
+              background-color: inherit;
+            }
+
+            ::-webkit-scrollbar {
+              width: 6px;
+              background-color: inherit;
+            }
+
+            ::-webkit-scrollbar-thumb {
+              background-color:  rgba(225, 225, 225, 0.3);
+              border-radius: 10px;
+            }
+            .side-link-container{
+              p{
+                color: rgb(255, 255, 255, 0.25);
+                font-size: 0.8rem;
+                margin-bottom: 4px;
+              }
+              >div{
+                p{
+                  color: #ffffff;
+                }
+                :hover{
+                  background: rgba(0, 0, 0, 0.35);
+                }
+              }
+              .active{
+                background: rgba(0, 0, 0, 0.35);
+              }
+            }
+          }
+          .col-lg-9{
+            border-bottom-right-radius: 10px;
+            &.flex-ct{
+              height: 54vh;
+            }
+            background: rgba(0, 0, 0, 0.35);
+            height: 60vh;
+            height: 95vh;
+            overflow-y: auto;
+            ::-webkit-scrollbar-track {
+              -webkit-box-shadow: inset 0 0 6px rgba(225, 225, 225, 0.3);
+              background-color: inherit;
+            }
+
+            ::-webkit-scrollbar {
+              width: 6px;
+              background-color: inherit;
+            }
+
+            ::-webkit-scrollbar-thumb {
+              background-color:  rgba(225, 225, 225, 0.3);
+              border-radius: 10px;
+            }
+          }
+          .big-avatar{
+            width: 100%;
+          }
+          .about{
+            h1{
+              font-family: 'Space Grotesk', sans-serif;
+                  font-weight: bold;
+            }
+            p{
+              color:  rgba(225, 225, 225, 0.6);
+              font-size: 18px;
+              font-family: 'Mulish', sans-serif;
+            }
+          }
+          .projects{  
+            margin-top: 70px;
+            margin-bottom: 70px;
+            img{
+              margin-top: 30px;
+              width: 70%;
+            }
+            .single-project{
+              background-color:  rgba(225, 225, 225, 0.05);
+              border-radius: 10px;
+              p{
+                font-family: 'Mulish', sans-serif;
+                font-size: 16px;
+              }
+            }
+          }
+          .tool{
+
+          }
+        }
+      }
+    }
+    .footer{
+      height: 70px;
+      .footer-content{
+        background: rgba(225, 225, 225, 0.25);
+        backdrop-filter: blur(4px);
+        border-radius: 15px;
+        -webkit-backdrop-filter: blur(4px);
+        padding-left: -15px !important;
+        img{
+          border-radius: 10px;
+          height: 50px;
+          width: 50px;
+          transition: all .2s;
+          margin-right:5px !important;
+          margin-left:5px !important;
+          :hover{
+            transform: scale(1.3);
+          }
+        }
+      }
+    }
+  }
   }
   @media (max-width: 420px) {
-    .header {
-      .header-content {
-        h1 {
-          font-size: 50px;
-        }
-        .header-desc {
-          font-size: 14px;
-        }
-      }
-      .icon-links {
-        display: none;
-      }
-      .zagImg {
-        display: none;
-      }
-      .triImg {
-        display: none;
-      }
-    }
+
   }
 `;
 

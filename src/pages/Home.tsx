@@ -4,12 +4,19 @@ import styled from "styled-components";
 import { Switch, Route, Link, useHistory } from "react-router-dom";
 import avatar from "../assets/img/avatar.jpg";
 import avatar2 from "../assets/img/avatar2.jpg";
-import macbook from "../assets/img/macbook.png";
+// import macbook from "../assets/img/macbook.png";
 import reactImg from "../assets/img/react-png.png";
 import reduxImg from "../assets/img/redux.png";
 import gitImg from "../assets/img/git.png";
 import mongodbImg from "../assets/img/mongodb.png";
 import nodeImg from "../assets/img/node.png";
+import eduImg from "../assets/img/eduImg.png";
+import tmacad from "../assets/img/tmacad.png";
+import rchme from "../assets/img/rchme.png";
+import nodeId from "../assets/img/node-id.png";
+import awacloud from "../assets/img/awa-cloud.png";
+import anna from "../assets/img/anna.png";
+import josax from "../assets/img/josax2.png";
 
 interface largeProps {
   large: boolean;
@@ -21,7 +28,7 @@ const Home = () => {
   const [name, setName] = useState("");
   const [phonenum, setPhone] = useState("");
   const [email, setEmail] = useState("");
-  //   const [message, setMessage] = useState("");
+  const [message, setMessage] = useState("");
   let none = "#";
 
   useEffect(() => {}, []);
@@ -173,6 +180,12 @@ const Home = () => {
                   <div className="p-1 px-2 rounded mb-1 ">
                     <p>Prettier</p>
                   </div>
+                  <div className="p-1 px-2 rounded mb-1 ">
+                    <p>Unit, Integration & E2E testing</p>
+                  </div>
+                  <div className="p-1 px-2 rounded mb-1 ">
+                    <p>Rest APIs</p>
+                  </div>
                 </div>
                 <div className="side-link-container">
                   <p>Hobbies</p>
@@ -242,7 +255,7 @@ const Home = () => {
                         <div className="row single-project ">
                           <div className="col-md-5 col-lg-5  p-3 py-4">
                             <div className="flex-ct">
-                              <img src={macbook} alt="edu" />
+                              <img src={rchme} alt="edu" />
                             </div>
                           </div>
                           <div className="col-md-7 p-3">
@@ -270,7 +283,7 @@ const Home = () => {
                         <div className="row single-project">
                           <div className="col-md-5 p-3 py-4">
                             <div className="flex-ct">
-                              <img src={macbook} alt="edu" />
+                              <img src={tmacad} alt="edu" />
                             </div>
                           </div>
                           <div className="col-md-7 p-3">
@@ -304,7 +317,7 @@ const Home = () => {
                         <div className="row single-project">
                           <div className="col-md-5 p-3 py-4">
                             <div className="flex-ct">
-                              <img src={macbook} alt="edu" />
+                              <img src={eduImg} alt="edu" />
                             </div>
                           </div>
                           <div className="col-md-7 p-3">
@@ -383,7 +396,7 @@ const Home = () => {
                         <div className="row single-project ">
                           <div className="col-md-12 col-lg-5 p-3 py-4">
                             <div className="flex-ct">
-                              <img src={macbook} alt="edu" />
+                              <img src={rchme} alt="edu" />
                             </div>
                           </div>
                           <div className="col-md-7 p-3">
@@ -411,7 +424,7 @@ const Home = () => {
                         <div className="row single-project">
                           <div className="col-md-5 p-3 py-4">
                             <div className="flex-ct">
-                              <img src={macbook} alt="edu" />
+                              <img src={tmacad} alt="edu" />
                             </div>
                           </div>
                           <div className="col-md-7 p-3">
@@ -445,7 +458,7 @@ const Home = () => {
                         <div className="row single-project">
                           <div className="col-md-5 p-3 py-4">
                             <div className="flex-ct">
-                              <img src={macbook} alt="edu" />
+                              <img src={awacloud} alt="edu" />
                             </div>
                           </div>
                           <div className="col-md-7 p-3">
@@ -474,7 +487,7 @@ const Home = () => {
                         <div className="row single-project">
                           <div className="col-md-5 p-3 py-4">
                             <div className="flex-ct">
-                              <img src={macbook} alt="edu" />
+                              <img src={eduImg} alt="edu" />
                             </div>
                           </div>
                           <div className="col-md-7 p-3">
@@ -490,6 +503,90 @@ const Home = () => {
                                 onClick={() =>
                                   window.open(
                                     "https://myedusponsor.com/",
+                                    "_blank"
+                                  )
+                                }
+                                className="btn shadow"
+                              >
+                                Launch
+                              </button>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div className="projects  mx-4">
+                        <div className="row single-project">
+                          <div className="col-md-5 p-3 py-4">
+                            <div className="flex-ct">
+                              <img src={nodeId} alt="edu" />
+                            </div>
+                          </div>
+                          <div className="col-md-7 p-3">
+                            <div className="">
+                              <h1>Node-Id</h1>
+                              <p>
+                                An npm package that randmonly generates a unique
+                                id for faster development set up.
+                              </p>
+                              <button
+                                onClick={() =>
+                                  window.open(
+                                    "https://www.npmjs.com/package/node-id",
+                                    "_blank"
+                                  )
+                                }
+                                className="btn shadow"
+                              >
+                                Launch
+                              </button>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div className="projects  mx-4">
+                        <div className="row single-project">
+                          <div className="col-md-5 p-3 py-4">
+                            <div className="flex-ct">
+                              <img src={anna} alt="edu" />
+                            </div>
+                          </div>
+                          <div className="col-md-7 p-3">
+                            <div className="">
+                              <h1>Julianna</h1>
+                              <p>
+                                A dark-themed portfolio website for Ogunlade
+                                Oluwasayo
+                              </p>
+                              <button
+                                onClick={() =>
+                                  window.open(
+                                    "https://julianna.netlify.app/",
+                                    "_blank"
+                                  )
+                                }
+                                className="btn shadow"
+                              >
+                                Launch
+                              </button>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div className="projects  mx-4">
+                        <div className="row single-project">
+                          <div className="col-md-5 p-3 py-4">
+                            <div className="flex-ct">
+                              <img src={josax} alt="edu" />
+                            </div>
+                          </div>
+                          <div className="col-md-7 p-3">
+                            <div className="">
+                              <h1>Josax</h1>
+                              <p>An online music store for Josax</p>
+                              <button
+                                onClick={() =>
+                                  window.open(
+                                    "https://josax.herokuapp.com/",
                                     "_blank"
                                   )
                                 }
@@ -563,9 +660,12 @@ const Home = () => {
                             />
                             <textarea
                               required
+                              onChange={(e) => setMessage(e.target.value)}
                               name=""
                               placeholder="Your Message"
-                            ></textarea>
+                            >
+                              {message}
+                            </textarea>
                             <button className="btn shadow" type="submit">
                               Submit
                             </button>
@@ -635,13 +735,14 @@ Home.Wrapper = styled.div<largeProps>`
     }
     .body-content {
       .col-xl-12{
+        border-radius: 10px;
         ${(props) =>
           props.large &&
           `position: fixed;
+          border-radius: 0;
         top: 28px;
         left: 0;`}
         box-shadow: 0 1rem 3rem rgba(0,0,0,.55)!important;
-        border-radius: 10px;
         background: rgba(0, 0, 0, 0.35);
         backdrop-filter: blur(18px);
         -webkit-backdrop-filter: blur(18px);
@@ -790,6 +891,10 @@ Home.Wrapper = styled.div<largeProps>`
             img{
               margin-top: 30px;
               width: 70%;
+              transition: transform .6s;
+              :hover{
+                transform: scale(1.5);
+              }
             }
             .single-project{
               background-color:  rgba(225, 225, 225, 0.05);

@@ -40,16 +40,22 @@ const Home = () => {
                 <a href="/">Joshua Olabiran</a>
               </li>
               <li>
-                <a href={none}>File</a>
+                <a href={none} className="disabled">
+                  File
+                </a>
               </li>
               <li>
-                <a href={none}>Edit</a>
+                <a href={none} className="disabled">
+                  Edit
+                </a>
               </li>
               <li>
-                <a href={none}>View</a>
+                <a href={none} className="disabled">
+                  View
+                </a>
               </li>
               <li>
-                <a href={none}>Go</a>
+                <a href="/">Refresh</a>
               </li>
             </ul>
           </div>
@@ -111,7 +117,7 @@ const Home = () => {
                 </div>
                 <div
                   className={`${
-                    window.location.pathname === "/contact" && "active"
+                    window.location.pathname === "/tweets" && "active"
                   }`}
                 >
                   <Link to="/tweets">Tweet</Link>
@@ -243,11 +249,10 @@ const Home = () => {
                             <div className="">
                               <h1>R'ch Me</h1>
                               <p>
-                                Lorem ipsum dolor sit amet consectetur,
-                                adipisicing elit. Architecto inventore porro
-                                blanditiis in! Voluptatibus minus, est maxime
-                                vel eos modi nemo illum ad deleniti beatae
-                                nostrum quas. Consequatur, amet voluptate.
+                                R'ch Me™ is the instant engagement platform that
+                                acts as a digital business card. The easiest way
+                                to share contact info, websites, socials -
+                                anything!
                               </p>
                               <button
                                 onClick={() =>
@@ -272,11 +277,13 @@ const Home = () => {
                             <div className="">
                               <h1>TM Academy</h1>
                               <p>
-                                Lorem ipsum dolor sit amet consectetur,
-                                adipisicing elit. Architecto inventore porro
-                                blanditiis in! Voluptatibus minus, est maxime
-                                vel eos modi nemo illum ad deleniti beatae
-                                nostrum quas. Consequatur, amet voluptate.
+                                TM30 ACADEMY is a name synonymous with
+                                excellence that offers results-oriented IT
+                                courses for personal career growth and corporate
+                                training in Nigeria. We have excelled in IT
+                                Training/Education, IT Consultancy and IT
+                                Solutions Development & Services. Our IT
+                                Training Centre is located in Lagos.
                               </p>
                               <button
                                 onClick={() =>
@@ -304,11 +311,10 @@ const Home = () => {
                             <div className="">
                               <h1>EduSponsor</h1>
                               <p>
-                                Lorem ipsum dolor sit amet consectetur,
-                                adipisicing elit. Architecto inventore porro
-                                blanditiis in! Voluptatibus minus, est maxime
-                                vel eos modi nemo illum ad deleniti beatae
-                                nostrum quas. Consequatur, amet voluptate.
+                                Edusponsor is a platform that enables candidates
+                                have access to examination sponsorship as well
+                                as other gifts from organizations after
+                                participating in qualifying tests
                               </p>
                               <button
                                 onClick={() =>
@@ -384,11 +390,10 @@ const Home = () => {
                             <div className="">
                               <h1>R'ch Me</h1>
                               <p>
-                                Lorem ipsum dolor sit amet consectetur,
-                                adipisicing elit. Architecto inventore porro
-                                blanditiis in! Voluptatibus minus, est maxime
-                                vel eos modi nemo illum ad deleniti beatae
-                                nostrum quas. Consequatur, amet voluptate.
+                                R'ch Me™ is the instant engagement platform that
+                                acts as a digital business card. The easiest way
+                                to share contact info, websites, socials -
+                                anything!
                               </p>
                               <button
                                 onClick={() =>
@@ -413,11 +418,13 @@ const Home = () => {
                             <div className="">
                               <h1>TM Academy</h1>
                               <p>
-                                Lorem ipsum dolor sit amet consectetur,
-                                adipisicing elit. Architecto inventore porro
-                                blanditiis in! Voluptatibus minus, est maxime
-                                vel eos modi nemo illum ad deleniti beatae
-                                nostrum quas. Consequatur, amet voluptate.
+                                TM30 ACADEMY is a name synonymous with
+                                excellence that offers results-oriented IT
+                                courses for personal career growth and corporate
+                                training in Nigeria. We have excelled in IT
+                                Training/Education, IT Consultancy and IT
+                                Solutions Development & Services. Our IT
+                                Training Centre is located in Lagos.
                               </p>
                               <button
                                 onClick={() =>
@@ -445,11 +452,8 @@ const Home = () => {
                             <div className="">
                               <h1>Awa Cloud</h1>
                               <p>
-                                Lorem ipsum dolor sit amet consectetur,
-                                adipisicing elit. Architecto inventore porro
-                                blanditiis in! Voluptatibus minus, est maxime
-                                vel eos modi nemo illum ad deleniti beatae
-                                nostrum quas. Consequatur, amet voluptate.
+                                A progressive web application that forecast the
+                                atmospheric condition of all cities in the world
                               </p>
                               <button
                                 onClick={() =>
@@ -477,11 +481,10 @@ const Home = () => {
                             <div className="">
                               <h1>EduSponsor</h1>
                               <p>
-                                Lorem ipsum dolor sit amet consectetur,
-                                adipisicing elit. Architecto inventore porro
-                                blanditiis in! Voluptatibus minus, est maxime
-                                vel eos modi nemo illum ad deleniti beatae
-                                nostrum quas. Consequatur, amet voluptate.
+                                Edusponsor is a platform that enables candidates
+                                have access to examination sponsorship as well
+                                as other gifts from organizations after
+                                participating in qualifying tests
                               </p>
                               <button
                                 onClick={() =>
@@ -573,7 +576,7 @@ const Home = () => {
                     </section>
                   </Route>
                   <Route to="/tweets">
-                    <div className="col-sm-10 mx-auto mt-3">
+                    <div className="col-sm-8 mx-auto mt-3">
                       <TwitterTimelineEmbed
                         sourceType="profile"
                         screenName="Olabiranjoshua"
@@ -692,6 +695,7 @@ Home.Wrapper = styled.div<largeProps>`
               border-bottom: rgba(225, 225, 225, 0.85) solid 2px;
               a{
                 color: rgb(255, 255, 255, 0.75);
+                font-weight: bold;
               }
             }
           }
@@ -826,6 +830,7 @@ Home.Wrapper = styled.div<largeProps>`
   }
   .contact {
     margin-top: 100px;
+    margin-bottom: 100px;
     .row {
       .col-md-6 {
         h2 {
@@ -1139,9 +1144,17 @@ Home.Wrapper = styled.div<largeProps>`
     }
   }
   }
-  @media (max-width: 420px) {
-    .nav-container{
-      
+  @media (max-width: 620px) {
+    .body-content {
+      .col-xl-12{
+        .nav-container{
+          flex-direction: column-reverse;
+          align-items: center;
+          .col-3-img{
+            margin-top: 10px;
+          }
+        }
+      }
     }
   }
 `;

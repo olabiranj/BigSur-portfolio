@@ -978,6 +978,7 @@ Home.Wrapper = styled.div<largeProps>`
         }
         form {
           margin-top: 20px;
+          margin-bottom: 50px;
           .text-input {
             margin-bottom: 20px;
             background: rgba(9, 9, 9, 0.27);

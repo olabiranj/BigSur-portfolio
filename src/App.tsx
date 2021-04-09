@@ -3,7 +3,7 @@ import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import { HOME } from "./services/routes";
-import loaderImg from "./assets/img/spinner.gif";
+import loaderImg from "./assets/img/loader.gif";
 
 import "./index.css";
 const Home = lazy(() => import("./pages/Home"));

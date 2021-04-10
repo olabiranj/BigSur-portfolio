@@ -188,15 +188,15 @@ const Home = () => {
                   </div>
                 </div>
                 <div className="side-link-container">
-                  <p>Hobbies</p>
-                  <div className="p-1 px-2 rounded mb-1 active shadow">
-                    <p>Driving</p>
-                  </div>
+                  <p>Interests</p>
                   <div className="p-1 px-2 rounded mb-1 ">
                     <p>Travelling</p>
                   </div>
                   <div className="p-1 px-2 rounded mb-1 ">
                     <p>Tennis</p>
+                  </div>
+                  <div className="p-1 px-2 rounded mb-1 active shadow">
+                    <p>Driving</p>
                   </div>
                 </div>
               </div>

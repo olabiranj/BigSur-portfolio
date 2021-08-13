@@ -133,7 +133,7 @@ const Home = () => {
                   <a
                     target="_blank"
                     rel="noreferrer"
-                    href="https://drive.google.com/file/d/1jekuDHov_-S9q1jvslJMhnB9-JyD_Y34/view?usp=sharing"
+                    href="https://drive.google.com/file/d/1TTdGfAcGflHWBnBLKgnHTMK3SnDfGP8d/view?usp=sharing"
                   >
                     Resume
                   </a>
@@ -679,7 +679,7 @@ const Home = () => {
                     <div className="col-sm-8 mx-auto mt-3">
                       <TwitterTimelineEmbed
                         sourceType="profile"
-                        screenName="Olabiranjoshua"
+                        screenName="olabiranjoshua"
                         options={{ height: 900 }}
                       />
                     </div>
@@ -846,6 +846,7 @@ Home.Wrapper = styled.div<largeProps>`
             }
           }
           .col-lg-9{
+            padding-bottom: 150px;
             border-bottom-right-radius: 10px;
             &.flex-ct{
               height: 54vh;
@@ -1168,6 +1169,7 @@ Home.Wrapper = styled.div<largeProps>`
             }
           }
           .col-lg-9{
+            padding-bottom: 150px;
             border-bottom-right-radius: 10px;
             &.flex-ct{
               height: 54vh;
@@ -1221,9 +1223,7 @@ Home.Wrapper = styled.div<largeProps>`
               }
             }
           }
-          .tool{
-
-          }
+          
         }
       }
     }
@@ -1250,6 +1250,7 @@ Home.Wrapper = styled.div<largeProps>`
     }
   }
   }
+  
   @media (max-width: 620px) {
     .body-content {
       .col-xl-12{

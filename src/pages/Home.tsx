@@ -3,7 +3,7 @@ import { TwitterTimelineEmbed } from "react-twitter-embed";
 import styled from "styled-components";
 import { Switch, Route, Link, useHistory } from "react-router-dom";
 import avatar from "../assets/img/avatar.jpg";
-import avatar2 from "../assets/img/avatar2.jpg";
+import avatar2 from "../assets/img/avatar.jpeg";
 // import macbook from "../assets/img/macbook.png";
 import reactImg from "../assets/img/react-png.png";
 import reduxImg from "../assets/img/redux.png";

@@ -133,7 +133,7 @@ const Home = () => {
                   <a
                     target="_blank"
                     rel="noreferrer"
-                    href="/Olabiran_Joshua_Web_CV (1).pdf"
+                    href="/joshua_cv.pdf"
                     // href="https://drive.google.com/file/d/1TTdGfAcGflHWBnBLKgnHTMK3SnDfGP8d/view?usp=sharing"
                   >
                     Resume

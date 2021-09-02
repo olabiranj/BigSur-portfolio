@@ -147,6 +147,9 @@ const Home = () => {
                 <a href="https://github.com/olabiranj">
                   <span className="fab fa-github mr-3"></span>
                 </a>
+                <a href="https://gitlab.com/olabiranj">
+                  <span className="fab fa-gitlab mr-3"></span>
+                </a>
                 <a href="https://www.linkedin.com/in/joshua-olabiran-6625a3177/">
                   <span className="fab fa-linkedin-in mr-3"></span>
                 </a>

@@ -133,7 +133,8 @@ const Home = () => {
                   <a
                     target="_blank"
                     rel="noreferrer"
-                    href="https://drive.google.com/file/d/1TTdGfAcGflHWBnBLKgnHTMK3SnDfGP8d/view?usp=sharing"
+                    href="/Olabiran_Joshua_Web_CV (1).pdf"
+                    // href="https://drive.google.com/file/d/1TTdGfAcGflHWBnBLKgnHTMK3SnDfGP8d/view?usp=sharing"
                   >
                     Resume
                   </a>
@@ -676,6 +677,7 @@ const Home = () => {
                     </section>
                   </Route>
                   <Route to="/tweets">
+                    <p>Tweets will not be visible for Nigerians</p>
                     <div className="col-sm-8 mx-auto mt-3">
                       <TwitterTimelineEmbed
                         sourceType="profile"

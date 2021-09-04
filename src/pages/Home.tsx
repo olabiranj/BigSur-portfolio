@@ -680,7 +680,7 @@ const Home = () => {
                     </section>
                   </Route>
                   <Route to="/tweets">
-                    <p>Tweets will not be visible for Nigerians</p>
+                    <p>Tweets will not be visible to Nigerians</p>
                     <div className="col-sm-8 mx-auto mt-3">
                       <TwitterTimelineEmbed
                         sourceType="profile"

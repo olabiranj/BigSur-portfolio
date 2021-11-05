@@ -1,4 +1,4 @@
-import React, { Suspense, lazy, useEffect } from "react";
+import { Suspense, lazy, useEffect } from "react";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import AOS from "aos";
 import "aos/dist/aos.css";
@@ -6,7 +6,7 @@ import { HOME } from "./services/routes";
 import loaderImg from "./assets/img/loader.gif";
 
 import "./index.css";
-const Home = lazy(() => import("./pages/Home"));
+const PagesContainer = lazy(() => import("./pages/PagesContainer"));
 
 function App() {
   useEffect(() => {
@@ -26,7 +26,8 @@ function App() {
     >
       <Router>
         <Switch>
-          <Route path={HOME} component={Home} />
+          <Route path={HOME} component={PagesContainer} />
+
           {/* <Route component={ErrorPage} />  */}
         </Switch>
       </Router>

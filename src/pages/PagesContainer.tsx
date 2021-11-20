@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { Switch, Route, Link } from "react-router-dom";
+import { Link } from "react-router-dom";
 import avatar from "../assets/img/avatar.jpg";
 import { StyledWrapper } from "../services/StyledWrapper";
 import Home from "./Home";
@@ -12,7 +12,9 @@ const PagesContainer = () => {
   const [close, setClose] = useState(false);
   let none = "#";
 
-  useEffect(() => {}, []);
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
   return (
     <StyledWrapper large={large}>
       <div className="flex-ct template-container">
@@ -141,11 +143,20 @@ const PagesContainer = () => {
               <div className="col-lg-3 pt-3">
                 <div className="side-link-container">
                   <p>Technologies</p>
+                  <div className="p-1 px-2 rounded mb-1 ">
+                    <p>Javascript</p>
+                  </div>
                   <div className="p-1 px-2 rounded mb-1 active">
                     <p>React</p>
                   </div>
                   <div className="p-1 px-2 rounded mb-1 ">
                     <p>Redux</p>
+                  </div>
+                  <div className="p-1 px-2 rounded mb-1 ">
+                    <p>SCSS</p>
+                  </div>
+                  <div className="p-1 px-2 rounded mb-1 ">
+                    <p>Typescript</p>
                   </div>
                   <div className="p-1 px-2 rounded mb-1 ">
                     <p>Git</p>
@@ -156,20 +167,12 @@ const PagesContainer = () => {
                   <div className="p-1 px-2 rounded mb-1 ">
                     <p>Node.js</p>
                   </div>
-                  <div className="p-1 px-2 rounded mb-1 ">
-                    <p>Express</p>
-                  </div>
+
                   <div className="p-1 px-2 rounded mb-1 ">
                     <p>ESlint</p>
                   </div>
                   <div className="p-1 px-2 rounded mb-1 ">
                     <p>Prettier</p>
-                  </div>
-                  <div className="p-1 px-2 rounded mb-1 ">
-                    <p>SCSS</p>
-                  </div>
-                  <div className="p-1 px-2 rounded mb-1 ">
-                    <p>Rest APIs</p>
                   </div>
                 </div>
                 <div className="side-link-container">
@@ -185,22 +188,27 @@ const PagesContainer = () => {
                   </div>
                 </div>
               </div>
-              <div className="col-lg-9">
-                <Switch>
-                  <Route path="/" exact>
-                    <Home />
-                  </Route>
-                  <Route path="/work" exact>
-                    <Works />
-                  </Route>
-                  <Route path="/contact" exact>
-                    <Contact />
-                  </Route>
-                  <Route to="/tweets">
-                    <Tweets />
-                  </Route>
-                </Switch>
-              </div>
+              {/* <div className="col-lg-9"> */}
+              {window.location.pathname === "/" && (
+                <div className="col-lg-9">
+                  <Home />
+                </div>
+              )}
+              {window.location.pathname === "/work" && (
+                <div className="col-lg-9">
+                  <Works />
+                </div>
+              )}
+              {window.location.pathname === "/contact" && (
+                <div className="col-lg-9">
+                  <Contact />
+                </div>
+              )}
+              {window.location.pathname === "/tweets" && (
+                <div className="col-lg-9">
+                  <Tweets />
+                </div>
+              )}
             </div>
           </div>
         </div>

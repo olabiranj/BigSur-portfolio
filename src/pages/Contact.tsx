@@ -64,10 +64,9 @@ const Contact = () => {
               required
               onChange={(e) => setMessage(e.target.value)}
               name=""
+              value={message}
               placeholder="Your Message"
-            >
-              {message}
-            </textarea>
+            ></textarea>
             <button className="btn shadow" type="submit">
               Submit
             </button>

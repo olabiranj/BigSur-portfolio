@@ -207,8 +207,10 @@ export const StyledWrapper = styled.div<LargeProps>`
               }
             }
           }
-          .tool{
-
+          .tools{
+            img{
+              width: 100px ;
+            }
           }
         }
       }

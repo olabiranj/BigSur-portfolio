@@ -6,15 +6,18 @@ import reduxImg from "../assets/img/redux.png";
 import gitImg from "../assets/img/git.png";
 import mongodbImg from "../assets/img/mongodb.png";
 import nodeImg from "../assets/img/node.png";
+import tsImg from "../assets/img/ts-img.png";
 import eduImg from "../assets/img/eduImg.png";
 import tmacad from "../assets/img/tmacad.png";
 import rchme from "../assets/img/rchme.png";
+import { useRef } from "react";
 
 const Home = () => {
+  var headerRef = useRef<any>(null);
   const history = useHistory();
 
   return (
-    <div className="col-md-10 mx-auto">
+    <div className="col-md-10 mx-auto" ref={headerRef}>
       <div className="flex-ct mx-3">
         <div className="row">
           <div className="col-md-5 pt-5" data-aos="fade-down">
@@ -145,11 +148,12 @@ const Home = () => {
       <br />
       <h4 className="mt-4 ml-3">Tools and Technologies</h4>
       <div className="flex-ct my-4 py-4 tools">
-        <img className="m-4" src={reactImg} alt="react" height={100} />
-        <img className="m-4" src={reduxImg} alt="redux" height={100} />
-        <img className="m-4" src={nodeImg} alt="react" height={100} />
-        <img className="m-4" src={gitImg} alt="react" height={100} />
-        <img className="m-4" src={mongodbImg} alt="redux" height={100} />
+        <img className="m-4" src={tsImg} alt="ts" />
+        <img className="m-4" src={reactImg} alt="rc" />
+        <img className="m-4" src={reduxImg} alt="redux" />
+        <img className="m-4" src={nodeImg} alt="node" />
+        <img className="m-4" src={gitImg} alt="regitact" />
+        <img className="m-4" src={mongodbImg} alt="mongodb" />
       </div>
     </div>
   );

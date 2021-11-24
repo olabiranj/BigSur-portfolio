@@ -30,13 +30,14 @@ const Home = () => {
           <div className="col-md-7 pt-5 about" data-aos="fade-up">
             <h1>What’s Up 😁?</h1>
             <p className="mt-3">
-              I'm <b className="text-light">Joshua Olabiran</b>, an experienced
-              Software Developer with a demonstrated history of working in the
-              information technology and services industry. I am skilled in
-              React, Redux, SCSS, RTK Query, Typescipt, Node.js, Express.js and
-              MongoDB. I convert UI designs made from Figma, Adobe XD, Zeplin,
-              etc into real world applications. I am a strong engineering
-              professional with a Bachelor of Science in Computer Science.
+              I'm <b className="text-light">Joshua Olabiran</b> an experienced
+              Software Developer with a working knowledge of the information
+              technology and services industry. I am skilled in React, Redux,
+              SCSS, Git, Node, EJS Template Engine, Express.js and MongoDB. I
+              convert UI designs made from Figma, Adobe XD, Zeplin, etc into
+              real world applications. I am a strong engineering professional
+              with a Bachelor of Science(Education) - focused in Computer
+              Science.
             </p>
             <a className="btn shadow" href="https://wa.me/2348093481350">
               Hire Me
@@ -47,7 +48,7 @@ const Home = () => {
       <br />
       <br />
       <h4 className="mt-4 ml-3 mb-4">Projects</h4>
-      <h3 className="col-md-8 mx-auto project-text">
+      <h3 className="col-md-12 mx-auto project-text">
         <b>
           "There is no such thing as a boring project. There are only boring
           executions "

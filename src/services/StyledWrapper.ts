@@ -37,6 +37,8 @@ export const StyledWrapper = styled.div<LargeProps>`
     .body-content {
       .col-xl-12{
         border-radius: 10px;
+        transition: all 0.2s linear;
+        position: relative;
         ${(props) =>
           props.large &&
           `position: fixed;

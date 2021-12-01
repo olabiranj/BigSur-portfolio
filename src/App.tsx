@@ -6,6 +6,7 @@ import { HOME } from "./services/routes";
 import loaderImg from "./assets/img/loader.gif";
 
 import "./index.css";
+// import Events from "./Events.js";
 const PagesContainer = lazy(() => import("./pages/PagesContainer"));
 
 function App() {
@@ -26,8 +27,8 @@ function App() {
     >
       <Router>
         <Switch>
+          {/* <Route path="/events/dd" component={Events} /> */}
           <Route path={HOME} component={PagesContainer} />
-
           {/* <Route component={ErrorPage} />  */}
         </Switch>
       </Router>

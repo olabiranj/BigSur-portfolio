@@ -126,9 +126,7 @@ const Home = () => {
                 organizations after participating in qualifying tests
               </p>
               <button
-                onClick={() =>
-                  window.open("https://myedusponsor.com/", "_blank")
-                }
+                onClick={() => window.open("https://edusponsor.com/", "_blank")}
                 className="btn shadow"
               >
                 Launch

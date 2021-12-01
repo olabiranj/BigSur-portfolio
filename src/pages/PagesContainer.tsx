@@ -116,7 +116,7 @@ const PagesContainer = () => {
                   <a
                     target="_blank"
                     rel="noreferrer"
-                    href="/joshua_cv.pdf"
+                    href="/Joshua_CV.pdf"
                     // href="https://drive.google.com/file/d/1TTdGfAcGflHWBnBLKgnHTMK3SnDfGP8d/view?usp=sharing"
                   >
                     Resume

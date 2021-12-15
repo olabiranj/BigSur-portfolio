@@ -116,8 +116,8 @@ const PagesContainer = () => {
                   <a
                     target="_blank"
                     rel="noreferrer"
-                    href="/Joshua_CV.pdf"
-                    // href="https://drive.google.com/file/d/1TTdGfAcGflHWBnBLKgnHTMK3SnDfGP8d/view?usp=sharing"
+                    // href="/Joshua_CV.pdf"
+                    href="https://matching.turing.com/developer-resume/d14a3b17d912ba65575e1937e0ece76e55ff392af8f1d4"
                   >
                     Resume
                   </a>

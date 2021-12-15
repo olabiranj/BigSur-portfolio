@@ -211,7 +211,7 @@ export const StyledWrapper = styled.div<LargeProps>`
           }
           .tools{
             img{
-              width: 100px ;
+              width: 80px ;
             }
           }
         }

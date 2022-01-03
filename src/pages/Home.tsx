@@ -31,13 +31,15 @@ const Home = () => {
             <h1>What’s Up 😁?</h1>
             <p className="mt-3">
               I'm <b className="text-light">Joshua Olabiran</b> an experienced
-              Software Developer with a working knowledge of the information
-              technology and services industry. I am skilled in React, Redux,
-              SCSS, Git, Node, EJS Template Engine, Express.js and MongoDB. I
-              convert UI designs made from Figma, Adobe XD, Zeplin, etc into
-              real world applications. I am a strong engineering professional
-              with a Bachelor of Science(Education) - focused in Computer
-              Science.
+              Software Developer with years professional working experience in
+              the information technology (IT) and services industry. Skilled in
+              React, Redux, Typescript, SCSS, Git, Node, Nex.js, Graghql,
+              Express.js, and MongoDB. Has ability to convert UI designs made
+              from Figma, Adobe XD, Zeplin, etc into real-world applications. A
+              strong engineering professional with a Bachelor of Science focused
+              in Computer Science. Also has ability to build web applications
+              following the best practices for optimal performance and
+              scalability.
             </p>
             <a className="btn shadow" href="https://wa.me/2348093481350">
               Hire Me

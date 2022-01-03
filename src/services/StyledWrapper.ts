@@ -181,7 +181,7 @@ export const StyledWrapper = styled.div<LargeProps>`
             }
             p{
               color:  rgba(225, 225, 225, 0.6);
-              font-size: 18px;
+              font-size: 16px;
               font-family: 'Mulish', sans-serif;
             }
           }

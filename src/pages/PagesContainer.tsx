@@ -146,6 +146,9 @@ const PagesContainer = () => {
                   <div className="p-1 px-2 rounded mb-1 ">
                     <p>Javascript</p>
                   </div>
+                  <div className="p-1 px-2 rounded mb-1 ">
+                    <p>Typescript</p>
+                  </div>
                   <div className="p-1 px-2 rounded mb-1 active">
                     <p>React</p>
                   </div>
@@ -153,26 +156,22 @@ const PagesContainer = () => {
                     <p>Redux</p>
                   </div>
                   <div className="p-1 px-2 rounded mb-1 ">
-                    <p>SCSS</p>
+                    <p>SASS/LESS</p>
                   </div>
                   <div className="p-1 px-2 rounded mb-1 ">
-                    <p>Typescript</p>
+                    <p>Next.js</p>
+                  </div>
+                  <div className="p-1 px-2 rounded mb-1 ">
+                    <p>Graphql</p>
+                  </div>
+                  <div className="p-1 px-2 rounded mb-1 ">
+                    <p>Node.js</p>
                   </div>
                   <div className="p-1 px-2 rounded mb-1 ">
                     <p>Git</p>
                   </div>
                   <div className="p-1 px-2 rounded mb-1 ">
                     <p>NPM</p>
-                  </div>
-                  <div className="p-1 px-2 rounded mb-1 ">
-                    <p>Node.js</p>
-                  </div>
-
-                  <div className="p-1 px-2 rounded mb-1 ">
-                    <p>ESlint</p>
-                  </div>
-                  <div className="p-1 px-2 rounded mb-1 ">
-                    <p>Prettier</p>
                   </div>
                 </div>
                 <div className="side-link-container">

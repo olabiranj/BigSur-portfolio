@@ -12,7 +12,7 @@ export default function Chatbot(props) {
   const steps = [
     {
       id: "Greet",
-      message: "Hello, Welcome to our shop",
+      message: "Hello, Welcome to my portfolio website",
       trigger: "Ask Name",
     },
     {

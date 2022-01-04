@@ -6,6 +6,7 @@ import Home from "./Home";
 import Works from "./Works";
 import Contact from "./Contact";
 import Tweets from "./Tweets";
+import Chatbot from "../components/Chatbot";
 
 const PagesContainer = () => {
   const [large, setLarge] = useState(false);
@@ -65,9 +66,8 @@ const PagesContainer = () => {
           </div>
         </div>
         <div
-          className={`body-content ${!large && "container"} ${
-            close && "d-none"
-          }`}
+          className={`body-content ${!large && "container"} ${close &&
+            "d-none"}`}
         >
           <div className="col-xl-12 mx-auto shadow-lg">
             <div className="row nav-container ">
@@ -92,23 +92,20 @@ const PagesContainer = () => {
                   <Link to="/">Home</Link>
                 </div>
                 <div
-                  className={`${
-                    window.location.pathname === "/work" && "active"
-                  }`}
+                  className={`${window.location.pathname === "/work" &&
+                    "active"}`}
                 >
                   <Link to="/work">My Works</Link>
                 </div>
                 <div
-                  className={`${
-                    window.location.pathname === "/contact" && "active"
-                  }`}
+                  className={`${window.location.pathname === "/contact" &&
+                    "active"}`}
                 >
                   <Link to="/contact">Contact</Link>
                 </div>
                 <div
-                  className={`${
-                    window.location.pathname === "/tweets" && "active"
-                  }`}
+                  className={`${window.location.pathname === "/tweets" &&
+                    "active"}`}
                 >
                   <Link to="/tweets">Tweet</Link>
                 </div>
@@ -212,6 +209,7 @@ const PagesContainer = () => {
           </div>
         </div>
       </div>
+      <Chatbot />
     </StyledWrapper>
   );
 };

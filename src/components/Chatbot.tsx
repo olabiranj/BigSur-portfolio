@@ -165,7 +165,7 @@ export default function Chatbot(props) {
     },
     {
       id: "Done",
-      message: "Have a great day !!",
+      message: "🍕🍕🍕🍕🍕 Have a great day !!",
       end: true,
     },
   ];

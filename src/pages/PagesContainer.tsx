@@ -141,9 +141,6 @@ const PagesContainer = () => {
                 <div className="side-link-container">
                   <p>Technologies</p>
                   <div className="p-1 px-2 rounded mb-1 ">
-                    <p>Javascript</p>
-                  </div>
-                  <div className="p-1 px-2 rounded mb-1 ">
                     <p>Typescript</p>
                   </div>
                   <div className="p-1 px-2 rounded mb-1 active">

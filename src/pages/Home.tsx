@@ -1,5 +1,4 @@
 import { useHistory } from "react-router-dom";
-import avatar2 from "../assets/img/avatar.jpeg";
 // import macbook from "../assets/img/macbook.png";
 import reactImg from "../assets/img/react-png.png";
 import reduxImg from "../assets/img/redux.png";
@@ -22,7 +21,7 @@ const Home = () => {
         <div className="row">
           <div className="col-md-5 pt-5" data-aos="fade-down">
             <img
-              src={avatar2}
+              src="https://media.licdn.com/dms/image/D4D03AQETjU4sNdjnog/profile-displayphoto-shrink_400_400/0/1665339540404?e=1677715200&v=beta&t=bkAYp_vLiapJ5_isTUy72Qc1zQFP8K_GDbRBo2vmUjc"
               alt="big-avatar"
               className="big-avatar rounded-circle shadow-lg mt-4"
             />
@@ -33,11 +32,11 @@ const Home = () => {
               I'm <b className="text-light">Joshua Olabiran</b> an experienced
               Software Developer with years professional working experience in
               the information technology (IT) and services industry. Skilled in
-              React, Redux, Typescript, SCSS, Git, Node, Nex.js, Graghql,
-              Express.js, and MongoDB. Has ability to convert UI designs made
-              from Figma, Adobe XD, Zeplin, etc into real-world applications. A
-              strong engineering professional with a Bachelor of Science focused
-              in Computer Science. Also has ability to build web applications
+              React, Next.js, Typescript, GraghQL, SCSS, Git, Node, Express.js,
+              and MongoDB. Has ability to convert UI designs made from Figma,
+              Adobe XD, Zeplin, etc into real-world applications. A strong
+              engineering professional with a Bachelor of Science focused in
+              Computer Science. Also has ability to build web applications
               following the best practices for optimal performance and
               scalability.
             </p>

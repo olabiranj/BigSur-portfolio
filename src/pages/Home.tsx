@@ -1,5 +1,5 @@
 import { useHistory } from "react-router-dom";
-// import macbook from "../assets/img/macbook.png";
+import mainjoe from "../assets/img/mainjoe.jpeg";
 import reactImg from "../assets/img/react-png.png";
 import reduxImg from "../assets/img/redux.png";
 import gitImg from "../assets/img/git.png";
@@ -21,7 +21,7 @@ const Home = () => {
         <div className="row">
           <div className="col-md-5 pt-5" data-aos="fade-down">
             <img
-              src="https://media.licdn.com/dms/image/D4D03AQETjU4sNdjnog/profile-displayphoto-shrink_400_400/0/1665339540404?e=1677715200&v=beta&t=bkAYp_vLiapJ5_isTUy72Qc1zQFP8K_GDbRBo2vmUjc"
+              src={mainjoe}
               alt="big-avatar"
               className="big-avatar rounded-circle shadow-lg mt-4"
             />

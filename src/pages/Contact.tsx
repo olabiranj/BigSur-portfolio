@@ -18,7 +18,7 @@ const Contact = () => {
           <div>
             <a href="mailto:olabiranj@gmail.com">
               <span className="fa fa-envelope"></span>
-              olaiyaolabiran@gmail.com
+              olabiranj@gmail.com
             </a>
           </div>
           <br />

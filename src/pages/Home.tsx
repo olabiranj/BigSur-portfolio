@@ -8,7 +8,7 @@ import nodeImg from "../assets/img/node.png";
 import tsImg from "../assets/img/ts-img.png";
 import eduImg from "../assets/img/eduImg.png";
 import tmacad from "../assets/img/tmacad.png";
-import rchme from "../assets/img/rchme.png";
+// import rchme from "../assets/img/rchme.png";
 import { useRef } from "react";
 
 const Home = () => {
@@ -57,7 +57,7 @@ const Home = () => {
         <br />
         ―Irene Etzkorn
       </h3>
-      <div className="projects mx-4 mb-3">
+      {/* <div className="projects mx-4 mb-3">
         <div className="row single-project ">
           <div className="col-md-5 col-lg-5  p-3 py-4">
             <div className="flex-ct">
@@ -81,7 +81,7 @@ const Home = () => {
             </div>
           </div>
         </div>
-      </div>
+      </div> */}
       <div className="projects mx-4 mb-3">
         <div className="row single-project">
           <div className="col-md-5 p-3 py-4">

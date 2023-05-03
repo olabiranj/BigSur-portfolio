@@ -1,16 +1,16 @@
-import eduImg from "../assets/img/eduImg.png";
+// import eduImg from "../assets/img/eduImg.png";
 import tmacad from "../assets/img/tmacad.png";
-import rchme from "../assets/img/rchme.png";
+// import rchme from "../assets/img/rchme.png";
 import nodeId from "../assets/img/node-id.png";
 import awacloud from "../assets/img/awa-cloud.png";
 import anna from "../assets/img/anna.png";
-import josax from "../assets/img/josax2.png";
+// import josax from "../assets/img/josax2.png";
 
 const Works = () => {
   return (
     <div className="col-md-10 mx-auto">
       <h4 className="mt-4 ml-3">Projects</h4>
-      <div className="projects mx-4 mb-3">
+      {/* <div className="projects mx-4 mb-3">
         <div className="row single-project ">
           <div className="col-md-12 col-lg-5 p-3 py-4">
             <div className="flex-ct">
@@ -34,7 +34,7 @@ const Works = () => {
             </div>
           </div>
         </div>
-      </div>
+      </div> */}
       <div className="projects mx-4 mb-3">
         <div className="row single-project">
           <div className="col-md-5 p-3 py-4">
@@ -90,7 +90,7 @@ const Works = () => {
           </div>
         </div>
       </div>
-      <div className="projects  mx-4">
+      {/* <div className="projects  mx-4">
         <div className="row single-project">
           <div className="col-md-5 p-3 py-4">
             <div className="flex-ct">
@@ -116,7 +116,7 @@ const Works = () => {
             </div>
           </div>
         </div>
-      </div>
+      </div> */}
       <div className="projects  mx-4">
         <div className="row single-project">
           <div className="col-md-5 p-3 py-4">
@@ -166,7 +166,7 @@ const Works = () => {
           </div>
         </div>
       </div>
-      <div className="projects  mx-4">
+      {/* <div className="projects  mx-4">
         <div className="row single-project">
           <div className="col-md-5 p-3 py-4">
             <div className="flex-ct">
@@ -188,7 +188,7 @@ const Works = () => {
             </div>
           </div>
         </div>
-      </div>
+      </div> */}
 
       <br />
     </div>

@@ -30,7 +30,7 @@ const Home = () => {
             <h1>What’s Up 😁?</h1>
             <p className="mt-3">
               I'm <b className="text-light">Joshua Olabiran</b> an experienced
-              Software Developer with years professional working experience in
+              Software Developer with years of professional working experience in
               the information technology (IT) and services industry. Skilled in
               React, Next.js, Typescript, GraghQL, SCSS, Git, Node, Express.js,
               and MongoDB. Has ability to convert UI designs made from Figma,

@@ -114,7 +114,7 @@ const PagesContainer = () => {
                     target="_blank"
                     rel="noreferrer"
                     // href="/Joshua_CV.pdf"
-                    href="https://matching.turing.com/developer-resume/d14a3b17d912ba65575e1937e0ece76e55ff392af8f1d4"
+                    href="https://matching.turing.com/developer-resume-preview/c273b7d677a9a62a55063abfaab4874a073a8759e537bc"
                   >
                     Resume
                   </a>
